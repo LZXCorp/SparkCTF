@@ -7,7 +7,9 @@
 </h1>
 
 <p align="center">
-    SparkCTF 2024 is a jeopardy-style CTF competition, with 48 hours to complete these challenges.
+    SparkCTF 2024 is a jeopardy-style CTF competition, designed for Year 1 to Year 3 Cybersecurity &amp; Digtal Forensics students to sharpen their skills and demonstrate their ability to quickly adapt and learn concepts within the time constraint of a regular CTF. There are over 60+ challenges spanning across multiple 6 categories!
+    <br><br>
+    The CTF commenced on 17 December 2024 at 0900 hours and concluded on 18 December 2024 at 2100 hours, with 36 hours to complete all of these challenges!
 </p>
 
 <br>
@@ -103,8 +105,8 @@ Here are all[^2] of the challenges writeups and solutions[^1] that were in the S
 > [!NOTE]
 > The service files will only be provided for 'pwn' and some 'misc' challenges.
 
-> [!WARNING] Missing Dist Files
-> Some of the dist files may be missing due to their size
+> [!WARNING]
+> Some of the dist files may be missing due to their size. They will be published after the infrastructure goes down.
 
 <br>
 <h1 align="center">
@@ -113,62 +115,60 @@ Here are all[^2] of the challenges writeups and solutions[^1] that were in the S
 
 ## Contributors
 
-Thanks to these great people for supporting in this Capture The Flag competition.
+Thanks to these great people for supporting me in creating this Capture The Flag competition!
 
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center">
-
-<a href="https://github.com/xSoulWisherx">
-    <p align="center" style="display: inline-flex; align-items: center; width: 330px;">
-        <img height="50" src="https://github.com/xSoulWisherx.png" alt="Logo">
-        <span style="margin-left: 14px; text-align: left;">
-            <strong style="font-size: 1rem;">Justin</strong><br>
-            <span style="font-size: 1rem; color: gray;">Student in Cybersecurity & Digital Forensics</span><br>
-        </span>
-    </p>
-</a>
-
-<a href="https://github.com/gavintjhxx">
-    <p align="center" style="display: inline-flex; align-items: center; width: 330px">
-        <img height="50" src="https://github.com/gavintjhxx.png" alt="Logo">
-        <span style="margin-left: 14px; text-align: left;">
-            <strong style="font-size: 1rem;">Gavin</strong><br>
-            <span style="font-size: 1rem; color: gray;">Student in Cybersecurity & Digital Forensics</span><br>
-        </span>
-    </p>
-</a>
-<a href="https://github.com/baesenseii">
-    <p align="center" style="display: inline-flex; align-items: center; width: 330px">
-        <img height="50" src="https://github.com/baesenseii.png" alt="Logo">
-        <span style="margin-left: 14px; text-align: left;">
-            <strong style="font-size: 1rem;">Sayed Hamzah</strong><br>
-            <span style="font-size: 1rem; color: gray;">Lecturer in Cybersecurity & Digital Forensics</span><br>
-        </span>
-    </p>
-</a>
-<a>
-    <p align="center" style="display: inline-flex; align-items: center; width: 330px">
-        <img height="50" src="https://github.com/example.png" alt="Logo">
-        <span style="margin-left: 14px; text-align: left;">
-            <strong style="font-size: 1rem;">Joseph</strong><br>
-            <span style="font-size: 1rem; color: gray;">Student in Immersive Media & Game Development</span><br>
-        </span>
-    </p>
-</a>
-
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="top">
+        <a href="https://github.com/xSoulWisherx">
+          <img height="50" src="https://github.com/xSoulWisherx.png" alt="Justin">
+        </a><br/>
+        <strong>Justin</strong><br/>
+        <span style="color: gray;">Student in Cybersecurity &amp; Digital Forensics</span>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://github.com/gavintjhxx">
+          <img height="50" src="https://github.com/gavintjhxx.png" alt="Gavin">
+        </a><br/>
+        <strong>Gavin</strong><br/>
+        <span style="color: gray;">Student in Cybersecurity &amp; Digital Forensics</span>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        <a href="https://github.com/baesenseii">
+          <img height="50" src="https://github.com/baesenseii.png" alt="Sayed Hamzah">
+        </a><br/>
+        <strong>Sayed Hamzah</strong><br/>
+        <span style="color: gray;">Lecturer in Cybersecurity &amp; Digital Forensics</span>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://github.com/example">
+          <img height="50" src="https://github.com/example.png" alt="Joseph">
+        </a><br/>
+        <strong>Joseph</strong><br/>
+        <span style="color: gray;">Student in Immersive Media &amp; Game Development</span>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ## Affiliations
 
 <div align="center">
-    <p style="display: inline-flex; align-items: center;">
-        <img height="100" src="./resource/tpcdfsig_logo.png" alt="Logo">
-        <span style="margin-left: 14px; text-align: left;">
-            <strong style="font-size: 1.5rem;">Cybersecurity & Digital Forensics</strong><br>
-            <span style="font-size: 1rem; color: gray;">Student Interest Group (AY2024/2025 Batch)</span><br>
-        </span>
-    </p>
+    <table>
+        <tr>
+        <td>
+            <img src="./resource/tpcdfsig_logo.png" alt="Logo" height="100">
+        </td>
+        <td>
+            <strong>Cybersecurity &amp; Digital Forensics</strong><br />
+            Student Interest Group (AY2024/2025 Batch)
+        </td>
+        </tr>
+    </table>
 </div>
 
 [^1]: Challenges that have 0 solves will have their solutions withheld until further notice. Do note that the flag for these challenges are possible to obtain.
 [^2]: Some challenges such as Sanity or Feedback challenges will **not** be included here.
-

@@ -15,5 +15,5 @@
 
 15. Combining the ASCII characters will give you the second half of the flag.
 
-> [!IMPORTANT] Full Solution Hidden
+> [!IMPORTANT]
 > This challenge is flagged as a 0 solve challenge. The full solution will be withheld until further notice.

@@ -8,5 +8,5 @@ c - k ≡ m^e \pmod n \\
 m^e ≡ (c - k) \mod n
 $$
 
-> [!IMPORTANT] Full Solution Hidden
+> [!IMPORTANT]
 > This challenge is **manually** flagged to be hidden. The full solution will be withheld until further notice.
