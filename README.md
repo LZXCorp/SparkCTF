@@ -159,8 +159,8 @@ Thanks to these great people for supporting me in creating this Capture The Flag
 <div align="center">
     <table>
         <tr>
-          <td height="80" width="80">
-              <img src="./resource/tpcdfsig_logo.png" alt="Logo" height="80" width="80">
+          <td style="width: 60px; text-align: center;">
+              <img src="./resource/tpcdfsig_logo.png" alt="Logo" height="60px" width="60px" style="object-fit: contain;">
           </td>
           <td>
               <strong>Cybersecurity &amp; Digital Forensics</strong><br/>
