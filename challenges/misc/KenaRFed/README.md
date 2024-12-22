@@ -9,6 +9,7 @@ Please help me recover my flag file :(
 - **Author:** Sayed Hamzah
 - **Category:** Misc
 - **Difficulty:** Hard
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Services
 - [`kenarfed`](./service) (port 4000:???)

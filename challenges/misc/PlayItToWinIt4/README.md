@@ -10,6 +10,7 @@ Hint: Play time is over kids, turn off the game.
 - **Author:** Joseph
 - **Category:** Misc
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{Xy@3Dp!6Zw#4$R9k#@Wp7Lz*L5V#Wm!8Zy@2&Q}`

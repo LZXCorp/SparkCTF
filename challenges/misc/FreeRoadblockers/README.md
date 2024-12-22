@@ -14,6 +14,7 @@ If your Anti Virus solution continues to annoy you, please make use of a Linux V
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Services
 - [`freeroadblockers`](./service/free-roadblockers) (port 443:???)

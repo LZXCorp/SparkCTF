@@ -7,6 +7,7 @@ What properties can I find here?
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `When you get sent a weblink on a WhatsApp chat, what will you see?` (10 points)

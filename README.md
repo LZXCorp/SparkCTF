@@ -159,13 +159,13 @@ Thanks to these great people for supporting me in creating this Capture The Flag
 <div align="center">
     <table>
         <tr>
-        <td>
-            <img src="./resource/tpcdfsig_logo.png" alt="Logo" height="100">
-        </td>
-        <td>
-            <strong>Cybersecurity &amp; Digital Forensics</strong><br />
-            Student Interest Group (AY2024/2025 Batch)
-        </td>
+          <td height="80" width="80">
+              <img src="./resource/tpcdfsig_logo.png" alt="Logo" height="80" width="80">
+          </td>
+          <td>
+              <strong>Cybersecurity &amp; Digital Forensics</strong><br/>
+              Student Interest Group (AY2024/2025 Batch)
+          </td>
         </tr>
     </table>
 </div>

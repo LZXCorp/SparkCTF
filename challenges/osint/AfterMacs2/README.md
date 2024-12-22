@@ -16,6 +16,7 @@ SIG24{bedok_interchange}
 - **Author:** Zhen Xiang
 - **Category:** Osint
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`after_macs2.mov`](./dist/after_macs2.mov)

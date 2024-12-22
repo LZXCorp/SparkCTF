@@ -6,6 +6,7 @@
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 None

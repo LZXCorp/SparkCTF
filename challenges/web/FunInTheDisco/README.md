@@ -6,6 +6,7 @@ Let's have fun in the Disco!
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Services
 - [`discoweb`](./service/disco-web) (port 80:???)

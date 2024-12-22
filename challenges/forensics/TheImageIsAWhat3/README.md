@@ -16,6 +16,7 @@ GCK's File Signatures Table: https://www.garykessler.net/library/file_sigs.html 
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Try checking the 3rd to 4th byte for their file signature` (100 Points)

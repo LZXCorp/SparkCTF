@@ -8,6 +8,7 @@ Oh yeah, there is also a second list! The password is all caps and 16 characters
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `I wonder why only some of the words are capitalized (capital letters)` (100 Points)

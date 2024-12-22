@@ -10,6 +10,7 @@ Once you figure it out, make use of the `flag_generator.py` to generate the flag
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`flag_gen.py`](./dist/flag_gen.py)

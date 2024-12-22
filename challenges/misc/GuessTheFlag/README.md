@@ -6,6 +6,7 @@ Well, like the title of this challenge says, you gonna have to guess the flag, l
 - **Author:** Sayed Hamzah
 - **Category:** Misc
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 None

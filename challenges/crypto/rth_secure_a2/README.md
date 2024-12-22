@@ -11,6 +11,7 @@ The public key (n,e) is provided in `secure.txt`.
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Hard
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `What can you factor out in the decryption equation such that m^e can be factored into it?` (100 Points)

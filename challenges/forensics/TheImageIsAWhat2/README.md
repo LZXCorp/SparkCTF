@@ -12,6 +12,7 @@ GCK's File Signatures Table: https://www.garykessler.net/library/file_sigs.html
 - **Author:** Justin
 - **Category:** Forensics
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `eLEpHanT` (10 points)

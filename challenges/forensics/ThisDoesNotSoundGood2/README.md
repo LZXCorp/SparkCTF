@@ -11,6 +11,7 @@ Audacity: https://www.audacityteam.org/
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`neon_en_comb.wav`](./dist/neon_en_comb.wav)

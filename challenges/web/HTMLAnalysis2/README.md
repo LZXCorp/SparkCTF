@@ -9,6 +9,7 @@ Bow before the Tracking ID and give it a Yes, and you shall proceed.
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Hard
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `What kind of styling did I use for the Tracking ID boxes?` (10 points)

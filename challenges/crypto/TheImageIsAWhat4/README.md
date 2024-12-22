@@ -17,6 +17,7 @@ Can you decrypt it?
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Hard
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Maybe compare the PNG File Signature to the file you are trying to decrypt` (100 Points)

@@ -6,6 +6,7 @@ If pwn challenges are new to you, could I recommend you to go to the PicoCTF web
 - **Author:** Sayed Hamzah
 - **Category:** Pwn
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`Dockerfile`](./dist/Dockerfile)

@@ -11,6 +11,7 @@ ZPN24{ao3az_z0_jv0s_jpwo3y}
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `It uses a Caesar Cipher for encryption.` (100 Points)

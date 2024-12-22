@@ -8,6 +8,7 @@ I heard that the Dev did not properly handle API requests >:)
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{_uNSaFe_s3Ss1on_hIjAck1nG_}`

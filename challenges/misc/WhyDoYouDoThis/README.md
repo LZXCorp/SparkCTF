@@ -8,6 +8,7 @@ Solve this Jigsaw puzzle to get the flag!
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`jigsaw.png`](./dist/jigsaw.png)

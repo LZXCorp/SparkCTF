@@ -11,6 +11,7 @@ FVT24{lBh_tBg_gUVF_vA}
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Rotation` (100 Points)

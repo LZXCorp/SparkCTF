@@ -7,6 +7,7 @@ Huh, it seems like SparkCTF has a special command. \
 - **Author:** Zhen Xiang & Gavin
 - **Category:** Misc
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Maybe I could get something out of that weird looking text` (10 points)

@@ -9,6 +9,7 @@ yeah help me decode this Hex, you only need to do it TWICE, I think!
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Do the decoding four times.` (100 Points)

@@ -8,6 +8,7 @@ How does that work?
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `There are two main ways of storing data on the client. One of them is LocalStorage.` (10 points)

@@ -15,6 +15,7 @@ Find it, and get the hidden password for the ZIP file!
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Insane
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`en_track5.wav`](./dist/en_track5.wav)

@@ -17,6 +17,7 @@ What3Words: https://what3words.com
 - **Author:** Zhen Xiang
 - **Category:** Osint
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `What filter do I use to only see HTTP requests?` (10 points)

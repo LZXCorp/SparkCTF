@@ -15,6 +15,7 @@ Bitwise operations are the best amirite.
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `There are many differnet operations; NOT, OR, AND... you get the idea` (100 Points)

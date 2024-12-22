@@ -11,6 +11,7 @@ Now, let's see how you can count now >:)
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Hard
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`countingflags.zip`](./dist/countingflags.zip)

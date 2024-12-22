@@ -12,6 +12,7 @@ Of course, there is an easier way of finding the messages... \
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{1000_h0Rr0R_fy1nG_n1gHtS1n_th3_huseof_r00ms}`

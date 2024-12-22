@@ -10,6 +10,7 @@ Oh wait, there are multiple text files.
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`findingflag.zip`](./dist/findingflag.zip)

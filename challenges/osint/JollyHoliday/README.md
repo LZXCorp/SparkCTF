@@ -17,6 +17,7 @@ What3Words: https://what3words.com
 - **Author:** Justin
 - **Category:** Osint
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`jh_locA.jpg`](./dist/jh_locA.jpg)

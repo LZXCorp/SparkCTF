@@ -11,6 +11,7 @@ Don't worry! After all, it is just binary.
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Keep on decoding until you get the desired result :)` (100 Points)

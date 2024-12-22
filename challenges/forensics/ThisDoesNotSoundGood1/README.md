@@ -11,6 +11,7 @@ Audacity: https://github.com/audacity/audacity/releases
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Hmmm... how do I visualize sound?` (100 Points)

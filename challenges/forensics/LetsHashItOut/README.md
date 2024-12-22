@@ -17,6 +17,7 @@ SIG24{password_of_ripper}
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`users.db`](./dist/users.db)

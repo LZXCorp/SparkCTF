@@ -7,6 +7,7 @@ Take a look at the website, and find the flag!
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`app_flag1_redacted.py`](./dist/app_flag1_redacted.py)

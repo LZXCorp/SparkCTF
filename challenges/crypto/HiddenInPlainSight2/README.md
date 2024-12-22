@@ -12,6 +12,7 @@ SrgcgoI{an__en_hpG4iiteiio_e2lhlf}
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `A trains wheelpair only consists of 2 wheels usually` (100 Points)

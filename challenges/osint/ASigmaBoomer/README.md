@@ -7,6 +7,7 @@ He named himself 'zephome-hasher' with a 'portfolio' project, and like I said, h
 - **Author:** Zhen Xiang
 - **Category:** Osint
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{tHiS_bo0m3r_SKibi}`

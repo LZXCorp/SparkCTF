@@ -12,6 +12,7 @@ SIG24{siglap_rd}
 - **Author:** Zhen Xiang
 - **Category:** Osint
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`after_macs1.mov`](./dist/after_macs1.mov)

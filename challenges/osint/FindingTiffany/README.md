@@ -13,6 +13,7 @@ All we have are the following information from her.
 - **Author:** Justin
 - **Category:** Osint
 - **Difficulty:** Hard
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{Runn1ng_1n_C1rcl3s}`

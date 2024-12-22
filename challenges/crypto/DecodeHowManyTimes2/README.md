@@ -9,6 +9,7 @@ Could you help me to decode it please. 😢
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`broad_ch2.py`](./dist/broad_ch2.py)

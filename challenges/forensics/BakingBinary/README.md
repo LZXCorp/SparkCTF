@@ -10,6 +10,7 @@ Which will make you think, "Where is the QR Code part?". Well... you are in for 
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Insane
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`finale.zip`](./dist/finale.zip)

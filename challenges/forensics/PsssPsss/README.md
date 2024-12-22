@@ -9,6 +9,7 @@ Do you mind helping me to get the secret out of this file please?
 - **Author:** Justin
 - **Category:** Forensics
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Have you considered this file is not initially created as a PDF?`

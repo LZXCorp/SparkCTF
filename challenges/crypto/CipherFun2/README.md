@@ -15,6 +15,7 @@ Also, if you are looking for the key, look at the first website.
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{crYpt0_vI2en3re_c1pHEr}`

@@ -11,6 +11,7 @@ SIG24{EW_1A_03_81}
 - **Author:** Justin
 - **Category:** Osint
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`back.jpg`](./dist/back.jpg)

@@ -7,6 +7,7 @@ How am I supposed to get the flag now?
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Insane
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`app_redacted.py`](./dist/app_redacted.py)

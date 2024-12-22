@@ -7,6 +7,7 @@ Either way, the password has to be somewhere here
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Zigaty-zagaty` (100 Points)

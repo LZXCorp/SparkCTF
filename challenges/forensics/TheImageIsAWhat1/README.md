@@ -12,6 +12,7 @@ GCK's File Signatures Table: https://www.garykessler.net/library/file_sigs.html
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Use the 'Search for' and search for the whole or part of the start file signature` (100 Points)

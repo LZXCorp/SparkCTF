@@ -8,6 +8,7 @@ It is time for your next step, `find` a file called `ctf_challenge`.
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{n0w_tHis_iS_fUn}`

@@ -6,6 +6,7 @@ Strangely, if I delete the `/tmp/competence_check` file, and open back the binar
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Flags
 - `SIG24{i2nT_thIS_PwN}`

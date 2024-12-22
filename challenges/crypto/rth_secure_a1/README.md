@@ -17,6 +17,7 @@ CyberChef (From Decimal): https://gchq.github.io/CyberChef/#recipe=From_Decimal(
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `n is p*q, both values are prime numbers. What method can be used to divide n into it's individual prime factors?` (100 Points)

@@ -11,6 +11,7 @@ VirtualBox: https://www.virtualbox.org/wiki/Downloads
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`SparkCTF24 - Welcome To Linux.ova`](./dist/SparkCTF24 - Welcome To Linux.ova)

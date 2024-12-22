@@ -9,6 +9,7 @@ The username is `anonymous`, the password is... something Top... fo...
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `What are the Most Used Passwords based on Wikipedia?` (5 points)

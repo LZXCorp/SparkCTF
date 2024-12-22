@@ -9,6 +9,7 @@ Just saying, all you need to do is fix the alignment.
 - **Author:** Zhen Xiang
 - **Category:** Forensics
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - `Are you maybe missing an alignment square?` (100 Points)

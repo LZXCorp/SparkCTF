@@ -9,6 +9,7 @@ Tell you what, if you go through the first 100 rooms, I'll give you a Hint and a
 - **Author:** Zhen Xiang
 - **Category:** Misc
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Services
 - [`a1000webproj`](./service/a1000-webproj) (port 80:???)

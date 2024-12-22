@@ -9,6 +9,7 @@ Take a look at this game, do you think you are up for the challenge?
 - **Author:** Joseph
 - **Category:** Misc
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files
 - [`SIG24_Game.zip`](./dist/SIG24_Game.zip)

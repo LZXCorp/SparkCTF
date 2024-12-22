@@ -6,6 +6,7 @@ Every cybersecurity student should know about this important protocol that helps
 - **Author:** Sayed Hamzah
 - **Category:** Web exploitation
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Services
 - [`essesselle`](./service) (port 443:???)
