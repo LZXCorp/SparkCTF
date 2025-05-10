@@ -10,8 +10,9 @@ You should take each item in the list as it's own value *c* for calculation.
 
 Make use of `README.md` to get the **Full Description** of this challenge.
 
-FactorDB: https://factordb.com/
-CyberChef (From Decimal): https://gchq.github.io/CyberChef/#recipe=From_Decimal('Space',false)
+**FactorDB:** https://factordb.com/
+
+**CyberChef (From Decimal)**: [https://gchq.github.io/](https://gchq.github.io/CyberChef/#recipe=From_Decimal('Space',false))
 
 ## Summary
 - **Author:** Zhen Xiang

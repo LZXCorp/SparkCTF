@@ -28,7 +28,7 @@ Which when combined, gives the password to the `finale.zip`
 
 ## Finale
 
-![Finale QR](./finale/flag.png)
+![Finale QR](../creation/finale/flag.png)
 
 This is a QRGB QR Code, which stores data using RGB colors through layering, allowing for 3x more storage capacity compared to a regular QR Code.
 (You can make use of CyberChef to separate it's RGB layers, or use the script below.)

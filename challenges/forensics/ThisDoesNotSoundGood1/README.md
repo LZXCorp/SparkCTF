@@ -1,11 +1,11 @@
 # This does not SOUND good - Flag 1
 
-Now this song is epic.
+Now this song is epic. \
 I wonder what the audio is hiding... maybe I could use a tool to find some hidden text...
 
 **Note:** If there are spaces, replace with `_` instead.
 
-Audacity: https://github.com/audacity/audacity/releases
+**Audacity:** https://github.com/audacity/audacity/releases
 
 ## Summary
 - **Author:** Zhen Xiang

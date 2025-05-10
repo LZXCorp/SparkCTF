@@ -6,6 +6,3 @@
 4. This resembles the fibonacci sequence, which is what this file was encrypted with.
 5. Make use of Python to create a script to help in the decryption of the file. [file_decryptfib.py](./file_decryptfib.py)
 6. Open the decrypted image file to get the flag.
-
-> [!IMPORTANT] Full Solution Shown
-> This challenge is shown despite being a 0 solve challenge.

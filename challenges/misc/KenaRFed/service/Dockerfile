@@ -14,4 +14,4 @@ RUN mkdir -p /run/sshd
 EXPOSE 4000
 
 RUN rm -rf /usr/bin/cat /usr/bin/ls /usr/bin/more /usr/bin/less /usr/bin/tail /usr/bin/head /usr/bin/find /usr/bin/tac /usr/bin/nl /usr/bin/grep /usr/bin/apt /usr/bin/apt-get
-CMD ["sshd","-D","-p","4000"]
+CMD ["/usr/sbin/sshd","-D","-p","4000"]

@@ -2,22 +2,19 @@
 
 The customers said the dish was too simple. This time, we added several new ingredients.
 
+## Summary
 - **Author:** Gavin
 - **Discord Username:** @gavintjh
 - **Category:** Crypto
 - **Difficulty:** Medium
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 
 - What if I told you CyberChef has a special algorithm that solves multiple layers of algorithms at one go? (5 points)
 
 ## Files
-
-- [obfuscated.txt](/challenges/crypto/Baker2_ImCooked/dist/obfuscated.txt)
-
-## Services
-
-None
+- [`obfuscated.txt`](./dist/obfuscated.txt)
 
 ## Flags
 

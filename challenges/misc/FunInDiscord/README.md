@@ -1,6 +1,7 @@
 # Fun In The Discord!
 
-Huh, it seems like SparkCTF has a special command. \
+Huh, it seems like SparkCTF has a special command.
+
 Ｍayｂｅ Ｉ сould ｇeｔ the fｌaｇ thｒｏugh ｔhіｓ speϲіal ϲommand?
 
 ## Summary

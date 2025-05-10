@@ -6,6 +6,7 @@ I heard there's a pretty great website that helps with encryption and decryption
 - **Discord Username:** @gavintjh
 - **Category:** Crypto
 - **Difficulty:** Easy
+- **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
 - Try using [cyberchef](https://gchq.github.io/CyberChef/). (2 points)
@@ -13,10 +14,7 @@ I heard there's a pretty great website that helps with encryption and decryption
 - It is known that the customer loves caeser salad dressing. (5 points)
 
 ## Files
-- [flag.txt](/challenges/crypto/Baker1_LetMeCook/dist/flag.txt)
-
-## Services
-None
+- [`flag.txt`](./dist/flag.txt)
 
 ## Flags
 - `SIG24{th1s_15_t0o_e4sY}` (static)

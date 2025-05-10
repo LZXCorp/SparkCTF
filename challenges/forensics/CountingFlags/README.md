@@ -20,4 +20,4 @@ Now, let's see how you can count now >:)
 - `SIG24{Ch3RRy_M4rS_m4Ns10N_P34cH},`
 
 ## Requirements
-- Finding the Flag
+- Finding The Flag

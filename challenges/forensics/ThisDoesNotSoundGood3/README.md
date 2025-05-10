@@ -21,7 +21,7 @@ Find it, and get the hidden password for the ZIP file!
 - [`en_track5.wav`](./dist/en_track5.wav)
 
 ## Flags
-- `SIG24{th1s_1S_sU3h_a_pAndeM0ni9m_m0MEnet}
+- `SIG24{th1s_1S_sU3h_a_pAndeM0ni9m_m0MEnet}`
 
 ## Requirements
 - This does not SOUND good - Flag 1

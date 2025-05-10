@@ -13,7 +13,7 @@ If pwn challenges are new to you, could I recommend you to go to the PicoCTF web
 - [`source.c`](./dist/source.c)
 
 ## Services
-- [`pwnieup`](./service) (port 4000:27925)
+- [`pwnieup`](./service) (port 4000:4019)
 
 ## Flags
 - `SIG24{fr0m_pWn_2_0wnZ}`

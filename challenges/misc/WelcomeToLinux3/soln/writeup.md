@@ -1,4 +1,3 @@
 # Solution
 
-> [!WARNING]
-> The solution to this challenge has not been completed
+1. Just look at the behavior to buffer overflow

@@ -11,8 +11,5 @@ Take a look at this game, do you think you are up for the challenge?
 - **Difficulty:** Easy
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
-## Files
-- [`SIG24_Game.zip`](./dist/SIG24_Game.zip)
-
 ## Flags
 - `SIG24{comPlet3d_fIrsT_L3V3l}`

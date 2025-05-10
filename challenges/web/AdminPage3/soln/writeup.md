@@ -1,23 +1,22 @@
 # Solution
 
-1. When clicking on any of the profiles, I noticed that there is a 'Session ID:' below, indicating that there might be a way to obtain it for session hijacking.
-![Tiffany](tiff.png)
+1. There are several rooms with Hints that lead up to the Token for privilege escalation. One of the rooms is the Movies Room.
 
-2. Within the browsers **Network** tab consisted of a GET request. There seems to be a `sessionid` there.
-![network](network.png)
+2. The Movies Chat has a message related to movies. There is a message that states `A1 movies are the best... but 25 is better`.
+![Movies Chat](movies.png)
 
-3. You can make use of it to escalate to user tiffany!
-![loggedin](loggedin.png)
+3. From there we can guess that the Session Token is probably `A125`. Inputting it as our cookie.\
+![A125](a125.png)
 
-4. There is a **Flag 3.5**
-![sig24](sig24.png)
+4. Refreshing the page will escalate our user to Tiffany, allowing us to view her room.
 
-5. Based off the description, we can make use of the JWT Encoder to encode a JWT token to escalate to admin.
-![jwt](jwt.png)
+5. We are given the hint to view the 7th Room.
+![Hint 2](hint2.png)
 
-```js
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiaWF0IjoxNzM0MzMxMzYyfQ.OLjEh-cw7TR-yMG4uJeyK5s7aRNHWOkGb3ggS-GV11U
-```
+6. In Room 7, we see the number '12' pop out a lot.
+![12](12.png)
 
-6. Thus, the successful escalation from tiffany to admin.
-![admin](admin.png)
+7. From there, we can assume that the Session Token to use is `A712`, `7` being the room number and `12` being the common number shown in Room 7. \
+![A712](A712.png)
+
+8. Refreshing once again escalates you to admin user. From there, enter the Admin room to get the Flag.

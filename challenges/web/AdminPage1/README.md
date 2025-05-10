@@ -7,7 +7,7 @@ The username is `anonymous`, the password is... something Top... fo...
 
 ## Summary
 - **Author:** Zhen Xiang
-- **Category:** Web exploitation
+- **Category:** Web Exploitation
 - **Difficulty:** Easy
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 

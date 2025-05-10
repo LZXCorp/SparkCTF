@@ -26,13 +26,13 @@
 
 | Category | Easy | Medium | Hard | Insane | Total |
 | -------- |:----:|:------:|:----:|:------:|:-----:|
-| [Crypto](challenges/crypto) | 8 | 1 | 2 | 0 | 11 (18.0%) |
-| [Forensics](challenges/forensics) | 5 | 6 | 1 | 2 | 14 (23.0%) |
-| [Misc](challenges/misc) | 8 | 6 | 1 | 0 | 15 (24.6%) |
-| [Osint](challenges/osint) | 3 | 3 | 1 | 0 | 7 (11.5%) |
-| [Pwn](challenges/pwn) | 3 | 1 | 0 | 0 | 4 (6.6%) |
-| [Web](challenges/web) | 5 | 3 | 1 | 1 | 10 (16.4%) |
-| Total | 32 | 20 | 6 | 3 | 61 |
+| [Crypto](challenges/crypto) | 9 | 2 | 2 | 0 | 13 (19.4%) |
+| [Forensics](challenges/forensics) | 5 | 6 | 1 | 2 | 14 (20.9%) |
+| [Misc](challenges/misc) | 8 | 6 | 1 | 0 | 15 (22.4%) |
+| [Osint](challenges/osint) | 3 | 3 | 1 | 0 | 7 (10.4%) |
+| [Pwn](challenges/pwn) | 4 | 1 | 0 | 1 | 6 (9.0%) |
+| [Web](challenges/web) | 6 | 4 | 1 | 1 | 12 (17.9%) |
+| Total | 35 | 22 | 6 | 4 | 67 |
 
 ## Challenges
 
@@ -40,6 +40,7 @@ Here are all[^2] of the challenges writeups and solutions[^1] that were in the S
 
 | Name | Category | Difficulty | Author |
 | ---- | -------- | ---------- | ------ |
+| [Baker 1 - Let me Cook!](challenges/crypto/Baker1_LetMeCook) | [crypto](challenges/crypto) | Easy | Gavin |
 | [Cipher Fun! - Flag 1](challenges/crypto/CipherFun1) | [crypto](challenges/crypto) | Easy | Zhen Xiang |
 | [Cipher Fun! - Flag 2](challenges/crypto/CipherFun2) | [crypto](challenges/crypto) | Easy | Zhen Xiang |
 | [Decode How Many Times? - Flag 1](challenges/crypto/DecodeHowManyTimes1) | [crypto](challenges/crypto) | Easy | Zhen Xiang |
@@ -48,6 +49,7 @@ Here are all[^2] of the challenges writeups and solutions[^1] that were in the S
 | [rth_secure_a - Flag 1](challenges/crypto/rth_secure_a1) | [crypto](challenges/crypto) | Easy | Zhen Xiang |
 | [What The Binary - Flag 1](challenges/crypto/WhatTheBinary1) | [crypto](challenges/crypto) | Easy | Zhen Xiang |
 | [What The Binary - Flag 2](challenges/crypto/WhatTheBinary2) | [crypto](challenges/crypto) | Easy | Zhen Xiang |
+| [Baker 2 - Am I Cooking This Right...?](challenges/crypto/Baker2_AmICooking) | [crypto](challenges/crypto) | Medium | Gavin |
 | [Decode How Many Times? - Flag 2](challenges/crypto/DecodeHowManyTimes2) | [crypto](challenges/crypto) | Medium | Zhen Xiang |
 | [rth_secure_a - Flag 2](challenges/crypto/rth_secure_a2) | [crypto](challenges/crypto) | Hard | Zhen Xiang |
 | [The Image is a What??? - Flag 4](challenges/crypto/TheImageIsAWhat4) | [crypto](challenges/crypto) | Hard | Zhen Xiang |
@@ -90,23 +92,24 @@ Here are all[^2] of the challenges writeups and solutions[^1] that were in the S
 | [FMT Yallz](challenges/pwn/fmt_yallz) | [pwn](challenges/pwn) | Easy | Sayed Hamzah |
 | [Pwnie Warmup](challenges/pwn/PwnieWarmup) | [pwn](challenges/pwn) | Easy | Sayed Hamzah |
 | [Pwnie Up](challenges/pwn/pwnie_up) | [pwn](challenges/pwn) | Easy | Sayed Hamzah |
+| [Spark Console - Flag 1](challenges/pwn/sparkconsole1) | [pwn](challenges/pwn) | Easy | Zhen Xiang |
 | [Overflow Me](challenges/pwn/overflowme) | [pwn](challenges/pwn) | Medium | Sayed Hamzah |
+| [Spark Console - Flag 2](challenges/pwn/sparkconsole2) | [pwn](challenges/pwn) | Insane | Zhen Xiang |
 | [Admin Page - Flag 1](challenges/web/AdminPage1) | [web](challenges/web) | Easy | Zhen Xiang |
 | [Admin Page - Flag 2](challenges/web/AdminPage2) | [web](challenges/web) | Easy | Zhen Xiang |
 | [ess_ess_elle](challenges/web/ess_ess_elle) | [web](challenges/web) | Easy | Sayed Hamzah |
 | [HTML Analysis - Flag 1](challenges/web/HTMLAnalysis1) | [web](challenges/web) | Easy | Zhen Xiang |
+| [I'm Insecure](challenges/web/ImInsecure) | [web](challenges/web) | Easy | Gavin |
 | [Secret Surprise Terrified Igloo 1](challenges/web/SecretSurpriseTerrifiedIgloo1) | [web](challenges/web) | Easy | Zhen Xiang |
 | [Admin Page - Flag 3](challenges/web/AdminPage3) | [web](challenges/web) | Medium | Zhen Xiang |
 | [Admin Page - Flag 4](challenges/web/AdminPage4) | [web](challenges/web) | Medium | Zhen Xiang |
 | [Fun In the Disco](challenges/web/FunInTheDisco) | [web](challenges/web) | Medium | Zhen Xiang |
+| [Just What's Tampered?](challenges/web/Just_Whats_Tampered-1) | [web](challenges/web) | Medium | Gavin |
 | [HTML Analysis - Flag 2](challenges/web/HTMLAnalysis2) | [web](challenges/web) | Hard | Zhen Xiang |
 | [Secret Surprise Terrified Igloo 2](challenges/web/SecretSurpriseTerrifiedIgloo2) | [web](challenges/web) | Insane | Zhen Xiang |
 
 > [!NOTE]
-> The service files will only be provided for 'pwn' and some 'misc' challenges.
-
-> [!WARNING]
-> Some of the dist files may be missing due to their size. They will be published after the infrastructure goes down.
+> The service files for **'web'** and some **'misc'** challenges will not be provided for copyright reasons.
 
 <br>
 <h1 align="center">

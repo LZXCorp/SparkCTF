@@ -1,5 +1,3 @@
 # Solution
 
-1. Refer to the image shown below
-
-![Front](./front.jpg)
+1. Refer to the unredacted image.

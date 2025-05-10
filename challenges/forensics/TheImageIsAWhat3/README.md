@@ -8,9 +8,11 @@ Yet I can't open this file! Why...
 
 Now that is just confusing. Could you help me fix the file?
 
-HEX Editor: https://hexed.it/ \
-GCK's File Signatures Table: https://www.garykessler.net/library/file_sigs.html \
-???Extract: **Not Provided**
+**HEX Editor:** https://hexed.it/
+
+**GCK's File Signatures Table:** https://www.garykessler.net/library/file_sigs.html
+
+**???Extract:** *Not Provided*
 
 ## Summary
 - **Author:** Zhen Xiang

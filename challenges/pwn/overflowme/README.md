@@ -15,7 +15,7 @@ If pwn challenges are new to you, could I recommend you to go to the PicoCTF web
 - [`source-redacted.c`](./dist/source-redacted.c)
 
 ## Services
-- [`overflowme`](./service) (port 4000:12345)
+- [`overflowme`](./service) (port 4000:4707)
 
 ## Flags
 - `SIG24{0v3rFl0w_B00mZ}`

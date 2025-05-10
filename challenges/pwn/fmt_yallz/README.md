@@ -16,7 +16,7 @@ If pwn challenges are new to you, could I recommend you to go to the PicoCTF web
 - [`source-redacted.c`](./dist/source-redacted.c)
 
 ## Services
-- [`fmtyallz`](./service) (port 4000:12669)
+- [`fmtyallz`](./service) (port 4000:5030)
 
 ## Flags
 - `SIG24{f0rm4t_54hw1nGz}`

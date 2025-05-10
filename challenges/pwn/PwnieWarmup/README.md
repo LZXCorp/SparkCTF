@@ -15,7 +15,7 @@ If pwn challenges are new to you, could I recommend you to go to the [PicoCTF we
 - [`source-redacted.c`](./dist/source-redacted.c)
 
 ## Services
-- [`pwniewarmup`](./service) (port 4000:14633)
+- [`pwniewarmup`](./service) (port 4000:6127)
 
 ## Flags
 - `SIG24{4_s1mpl3_w4rmUp}`

@@ -5,8 +5,9 @@ I was hiding some text in the text file, but I forgot how to obtain it back. Eit
 Please help me fix my file and obtain the text from there. \
 Good luck!
 
-HEX Editor: https://hexed.it/ \
-GCK's File Signatures Table: https://www.garykessler.net/library/file_sigs.html
+**HEX Editor:** https://hexed.it/
+
+**GCK's File Signatures Table:** https://www.garykessler.net/library/file_sigs.html
 
 ## Summary
 - **Author:** Zhen Xiang

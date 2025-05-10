@@ -1,6 +1,6 @@
 # Decode How Many Times? - Flag 2
 
-Would you look at that, a large text file.
+Would you look at that, a large text file. \
 It seems to contain a large Base64 string in it.
 
 Could you help me to decode it please. 😢

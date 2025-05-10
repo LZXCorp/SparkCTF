@@ -1,6 +1,6 @@
 # Baking Soda
 
-You've been scanning QR Codes, but do you understand how it works?
+You've been scanning QR Codes, but do you understand how it works? \
 Well, we have the challenge just for you! Finish the QR Code to get the flag!
 
 Just saying, all you need to do is fix the alignment.

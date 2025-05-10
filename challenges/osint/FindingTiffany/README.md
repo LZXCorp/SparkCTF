@@ -4,10 +4,9 @@ Oh no! Tiffany has hide the flag from us and we have to find it from her! Unfort
 
 All we have are the following information from her.
 
-**Name:** Tiffany
-**Birthday:** 15 May 2002
+**Username:** tiff150502
 
-**Hint (Free):** Maybe there are other softwares that have similar functionality to wayback machine.
+**Hint (Free):** Maybe archive.ph may help us to solve this challenge...
 
 ## Summary
 - **Author:** Justin

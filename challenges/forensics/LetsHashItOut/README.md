@@ -6,10 +6,10 @@ Thankfully, I remembered saving it into a database!
 Will you be so kind to help me out and get my password back please 🥺.
 
 **Flag Format:** \
-SIG24{password_of_ripper}
+`SIG24{password_of_ripper}`
 
 **John:** https://github.com/openwall/john \
-**Rockuyou:** https://github.com/praetorian-inc/Hob0Rules/blob/master/wordlists/rockyou.txt.gz
+**Rockuyou:** [rockyou.txt.gz](https://github.com/praetorian-inc/Hob0Rules/blob/master/wordlists/rockyou.txt.gz)
 
 `users.db` - 5f021d3f8611e09d7641ab6ed28d67a2aea8423f
 

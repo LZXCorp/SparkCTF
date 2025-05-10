@@ -6,16 +6,18 @@ All Challengse relating to *Crypto* for SparkCTF 2024.
 
 | Difficulty | Number of Challenges |
 | ---------- |:--------------------:|
-| Easy | 8 |
-| Medium | 1 |
+| Easy | 9 |
+| Medium | 2 |
 | Hard | 2 |
 | Insane | 0 |
-| Total | 11 |
+| Total | 13 |
 
-## Challenges (11 total)
+## Challenges (13 total)
 
 | Name | Difficulty | Author |
 | ---- | ---------- | ------ |
+| [Baker 1 - Let me Cook!](./Baker1_LetMeCook) | Easy | Gavin |
+| [Baker 2 - Am I Cooking This Right...?](./Baker2_AmICooking) | Medium | Gavin |
 | [Cipher Fun! - Flag 1](./CipherFun1) | Easy | Zhen Xiang |
 | [Cipher Fun! - Flag 2](./CipherFun2) | Easy | Zhen Xiang |
 | [Decode How Many Times? - Flag 1](./DecodeHowManyTimes1) | Easy | Zhen Xiang |

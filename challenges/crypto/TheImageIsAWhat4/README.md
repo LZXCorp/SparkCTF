@@ -10,7 +10,8 @@ Can you decrypt it?
 
 *It is recommended that you finish 'The Image is a What??? - Flag 1' before proceeding.*
 
-**HEX Editor:** https://hexed.it/ \
+**HEX Editor:** https://hexed.it/
+
 **GCK's File Signatures Table:** https://www.garykessler.net/library/file_sigs.html
 
 ## Summary
