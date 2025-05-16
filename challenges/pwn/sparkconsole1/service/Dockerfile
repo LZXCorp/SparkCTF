@@ -8,12 +8,13 @@ RUN mkdir -p /home/pwn
 RUN chown -R pwn:pwn /home/pwn
 
 COPY sparkconsole.c /home/pwn/sparkconsole.c
-RUN gcc -m32 -o /home/pwn/sparkconsole /home/pwn/sparkconsole.c -fno-stack-protector
+RUN gcc -m32 -o /home/pwn/sparkconsole /home/pwn/sparkconsole.c -fno-stack-protector && \
+    rm /home/pwn/sparkconsole.c
 
 COPY flag.txt /home/pwn/flag.txt
-RUN chmod a+r /home/pwn/flag.txt
+RUN chmod 444 /home/pwn/flag.txt
 
-RUN chmod +x /home/pwn/sparkconsole
+RUN chmod 511 /home/pwn/sparkconsole
 WORKDIR /home/pwn
 
 EXPOSE 4000

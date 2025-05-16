@@ -8,6 +8,7 @@ RUN chown -R pwn:pwn /home/pwn
 
 ADD source.c /home/pwn/source.c
 ADD flag /home/pwn/flag
+RUN chown -R pwn:pwn /home/pwn/flag
 RUN gcc -m32 -o /home/pwn/pwnie-up /home/pwn/source.c -fno-stack-protector -z execstack
 
 RUN chmod +x /home/pwn/pwnie-up

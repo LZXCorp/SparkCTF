@@ -5,13 +5,13 @@ Where is the location of this pink looking attraction?
 
 (This is where I want to go for the holidays :O)
 
-The flag is the 3 letter that pinpoint this location!
+The flag is the **3 words** that pinpoint this location!
 
 **Flag Format:** \
 https://what3words.com/those.goals.camera \
-SIG24{those.goals.camera}
+`SIG24{those.goals.camera}`
 
-What3Words: https://what3words.com
+**What3Words:** https://what3words.com
 
 ## Summary
 - **Author:** Justin

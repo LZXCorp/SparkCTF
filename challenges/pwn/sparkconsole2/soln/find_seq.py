@@ -4,10 +4,10 @@ context.arch = 'i386'
 binary = ELF('./sparkconsole')
 p = process(binary.path)
 
-p: process = gdb.debug(binary.path,'''
-    b main
-    c
-''')
+# p: process = gdb.debug(binary.path,'''
+#     b vuln
+#     c
+# ''')
 
 p.recvuntil(b'$ ')
 sig = input('sig: ')

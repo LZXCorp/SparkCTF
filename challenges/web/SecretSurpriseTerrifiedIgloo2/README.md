@@ -6,7 +6,7 @@ How am I supposed to get the flag now?
 ## Summary
 - **Author:** Zhen Xiang
 - **Category:** Web exploitation
-- **Difficulty:** Insane
+- **Difficulty:** Hard
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Files

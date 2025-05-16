@@ -12,12 +12,12 @@ Can you decrypt it?
 
 **HEX Editor:** https://hexed.it/
 
-**GCK's File Signatures Table:** https://www.garykessler.net/library/file_sigs.html
+**GCK's File Signatures Table:** https://filesig.search.org/
 
 ## Summary
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
-- **Difficulty:** Hard
+- **Difficulty:** Insane
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints

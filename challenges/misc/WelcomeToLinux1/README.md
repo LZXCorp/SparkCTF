@@ -5,7 +5,7 @@ See that OVA file? Use a Virtualization software like VirtualBox to import and r
 
 Further instructions will be given there, good luck!
 
-VirtualBox: https://www.virtualbox.org/wiki/Downloads
+**VirtualBox:** https://www.virtualbox.org/wiki/Downloads
 
 ## Summary
 - **Author:** Zhen Xiang

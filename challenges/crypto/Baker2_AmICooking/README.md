@@ -10,8 +10,7 @@ The customers said the dish was too simple. This time, we added several new ingr
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
-
-- What if I told you CyberChef has a special algorithm that solves multiple layers of algorithms at one go? (5 points)
+- `What if I told you CyberChef has a special algorithm that solves multiple layers of algorithms at one go?` (5 points)
 
 ## Files
 - [`obfuscated.txt`](./dist/obfuscated.txt)

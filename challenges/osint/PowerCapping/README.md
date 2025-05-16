@@ -8,10 +8,10 @@ Use the information from your analysis to find the location!
 
 **Flag Format:** \
 https://what3words.com/those.goals.camera \
-SIG24{those.goals.camera}
+`SIG24{those.goals.camera}`
 
-Wireshark: https://www.wireshark.org/download.html
-What3Words: https://what3words.com
+**Wireshark:** https://www.wireshark.org/download.html
+**What3Words:** https://what3words.com
 
 ## Summary
 - **Author:** Zhen Xiang

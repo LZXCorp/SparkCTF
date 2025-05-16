@@ -1,6 +1,6 @@
 # Kena RFed
 
-My colleage thought that `rm -rf --no-preserve-root` is used to remove the French language. \
+My colleague thought that `rm -rf --no-preserve-root` is used to remove the French language. \
 Please help me recover my flag file :(
 
 **Note:** The password to the SSH is `thisisasecret`

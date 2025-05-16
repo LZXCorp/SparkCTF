@@ -7,7 +7,7 @@ Either way, the password has to be somewhere here
 ## Summary
 - **Author:** Zhen Xiang
 - **Category:** Forensics
-- **Difficulty:** Medium
+- **Difficulty:** Hard
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints

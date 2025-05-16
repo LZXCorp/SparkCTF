@@ -28,4 +28,4 @@
 }
 ```
 
-7. We find a not so flaggy flag hidden in the metadata. Using a bruteforce Caesar Cipher tool, we find that the flag is actually: `sigh1den_fr0_plane_site`. Which when cleaned up, becomes: `SIG{h1den_fr0_plane_site}`
+7. We find a not so flaggy flag hidden in the metadata. Using a bruteforce Caesar Cipher tool, we find that the flag is actually: `sigh1den_fr0_plane_site`. Which when cleaned up, becomes: `SIG24{h1den_fr0_plane_site}`

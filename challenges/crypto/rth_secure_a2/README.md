@@ -10,7 +10,7 @@ The public key (n,e) is provided in `secure.txt`.
 ## Summary
 - **Author:** Zhen Xiang
 - **Category:** Cryptography
-- **Difficulty:** Hard
+- **Difficulty:** Insane
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints

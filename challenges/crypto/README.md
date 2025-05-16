@@ -8,8 +8,8 @@ All Challengse relating to *Crypto* for SparkCTF 2024.
 | ---------- |:--------------------:|
 | Easy | 9 |
 | Medium | 2 |
-| Hard | 2 |
-| Insane | 0 |
+| Hard | 0 |
+| Insane | 2 |
 | Total | 13 |
 
 ## Challenges (13 total)
@@ -24,8 +24,8 @@ All Challengse relating to *Crypto* for SparkCTF 2024.
 | [Decode How Many Times? - Flag 2](./DecodeHowManyTimes2) | Medium | Zhen Xiang |
 | [Hidden in Plain Sight - Flag 1](./HiddenInPlainSight1) | Easy | Zhen Xiang |
 | [Hidden in Plain Sight - Flag 2](./HiddenInPlainSight2) | Easy | Zhen Xiang |
-| [The Image is a What??? - Flag 4](./TheImageIsAWhat4) | Hard | Zhen Xiang |
+| [The Image is a What??? - Flag 4](./TheImageIsAWhat4) | Insane | Zhen Xiang |
 | [What The Binary - Flag 1](./WhatTheBinary1) | Easy | Zhen Xiang |
 | [What The Binary - Flag 2](./WhatTheBinary2) | Easy | Zhen Xiang |
 | [rth_secure_a - Flag 1](./rth_secure_a1) | Easy | Zhen Xiang |
-| [rth_secure_a - Flag 2](./rth_secure_a2) | Hard | Zhen Xiang |
+| [rth_secure_a - Flag 2](./rth_secure_a2) | Insane | Zhen Xiang |

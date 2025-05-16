@@ -1,18 +1,25 @@
 # The Image is a What??? - Flag 3
 
-As you might have probably gussed... \
+As you might have probably guessed... \
 this ain't your normal ima...
 
 Wait a second, the file type is not an image. \
 Yet I can't open this file! Why...
 
+This file is supposed to be a `.mkv`.
+
 Now that is just confusing. Could you help me fix the file?
 
-**HEX Editor:** https://hexed.it/
-
-**GCK's File Signatures Table:** https://www.garykessler.net/library/file_sigs.html
+**HEX Editor:** https://hexed.it/ \
+**GCK's File Signatures Table:** https://filesig.search.org/
 
 **???Extract:** *Not Provided*
+
+**Flag Format:** `SIG24{decoded_flag}`
+
+**Free Hint:** \
+Usually in images, you have data like date taken, camera aperature, etc. \
+Then when it comes to `???`'s, they have data such as...
 
 ## Summary
 - **Author:** Zhen Xiang

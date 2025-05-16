@@ -1,8 +1,12 @@
 # Spark Console - Flag 2
 
-No playing around now >:(
+No playing around now >:( \
+Will you be able to pivot?
 
-*Note: It is the same binary as Flag 1's*
+***Note:** It is the same binary and port as Flag 1's*
+
+**pwntools:** https://docs.pwntools.com/en/stable/install.html \
+**pwndbg:** https://github.com/pwndbg/pwndbg
 
 ## Summary
 - **Author:** Zhen Xiang

@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  drinks:
+    build: .
+    container_name: drinks
+    ports:
+      - "6055:4000"

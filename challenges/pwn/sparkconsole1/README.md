@@ -11,10 +11,10 @@ Surely the flag is not that easy.
 
 ## Files
 - [`Dockerfile`](./dist/Dockerfile)
-- [`sparkconsole.c`](./dist/sparkconsole.c)
+- [`sc-redact.c`](./dist/sc-redact.c)
 
 ## Services
-- [`sparkconsole1`](./service) (port 4000:5003)
+- [`sparkconsole1`](./service) (port 4000:4639)
 
 ## Flags
 `SIG24{Buff3r_0v3rfl0w_1s_FuN!}`

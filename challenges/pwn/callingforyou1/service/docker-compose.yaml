@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  cfy1:
+    build: .
+    container_name: cfy1
+    ports:
+      - "5055:4000"

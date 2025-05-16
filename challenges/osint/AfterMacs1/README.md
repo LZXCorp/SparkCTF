@@ -6,7 +6,7 @@ Could you help figure out the location I am at? Or at least, the Building I am i
 
 **Flag Format:** \
 Type in the address name (first two words only), and replace spacings with '_'. \
-SIG24{siglap_rd}
+`SIG24{siglap_rd}`
 
 ## Summary
 - **Author:** Zhen Xiang

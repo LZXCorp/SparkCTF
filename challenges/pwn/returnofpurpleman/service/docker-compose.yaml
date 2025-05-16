@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  return-of-purpleman:
+    build: .
+    container_name: return-of-purpleman
+    ports:
+      - "7420:4000"

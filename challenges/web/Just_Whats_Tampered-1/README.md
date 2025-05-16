@@ -1,4 +1,4 @@
-# Just What's Tampered?
+# Just What's Tampered? - Flag 1
 The Web Developers said they patched it.. but is anything ever 100% secure...? They said it should fixed the old problem and talked about having... something about 'roleplay sessions'?
 
 ## Summary
@@ -9,14 +9,11 @@ The Web Developers said they patched it.. but is anything ever 100% secure...? T
 - **Solution Writeup:** [`writeup.md`](./soln/writeup.md)
 
 ## Hints
-- I wonder if the challenge name has got anything to do with the vulnerability...? (5 points)
-- They said something about having cookies during the session too...? (5 points)
+- `I wonder if the challenge name has got anything to do with the vulnerability...?` (5 points)
+- `They said something about having cookies during the session too...?` (5 points)
 
 ## Services
 - [`justwhatstampered1`](./service) (port 8080:???)
 
 ## Flags
 - `SIG24{ju1cY_w3b_t0k3n5}` (static)
-
-## Requirements
-- I'm Insecure
