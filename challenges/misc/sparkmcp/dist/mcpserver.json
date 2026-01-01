@@ -1,0 +1,11 @@
+{
+    "mcpservers": {
+        "sparkmcp": {
+			"url": "http://mcp.sparkctf.org:6080/mcp/",
+			"type": "http",
+			"headers": {
+				"Authorization": "Bearer guest"
+			}
+		}
+    }
+}

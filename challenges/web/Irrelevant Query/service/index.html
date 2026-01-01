@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>SparkShop</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 min-h-screen">
+		<header class="bg-white shadow">
+			<div class="max-w-4xl mx-auto py-6 px-4">
+				<h1 class="text-2xl font-semibold">SparkShop</h1>
+			</div>
+		</header>
+
+		<main class="max-w-4xl mx-auto p-6">
+			<div id="products" class="grid grid-cols-1 sm:grid-cols-3 gap-6"></div>
+		</main>
+
+		<script>
+
+			const products = [
+				{ id: 3, name: "coffee", image: "coffee.png", price: "$0.99" },
+				{ id: 1, name: "oiia", image: "ket.png", price: "$199.99" },
+				{ id: 2, name: "train", image: "train.png", price: "$1999.90" }
+			];
+
+			const container = document.getElementById('products');
+
+			products.forEach(p => {
+				const card = document.createElement('div');
+				card.className = 'bg-white p-4 rounded-lg shadow flex flex-col items-center';
+
+				const img = document.createElement('img');
+				img.alt = p.name;
+				img.className = 'w-40 h-40 object-contain mb-4 bg-gray-50';
+				img.dataset.filename = p.image;
+				card.appendChild(img);
+
+				const title = document.createElement('div');
+				title.className = 'font-medium';
+				title.textContent = p.name;
+				card.appendChild(title);
+
+				const price = document.createElement('div');
+				price.className = 'text-sm text-gray-600';
+				price.textContent = p.price;
+				card.appendChild(price);
+
+				container.appendChild(card);
+
+				(async function loadImage(filename, imgEl) {
+					try {
+						const resp = await fetch('/img/' + encodeURIComponent(filename), {
+                            headers: {
+                                "X-Internal-Origin": "/"
+                            }
+                        });
+
+
+						if (!resp.ok) {
+							imgEl.alt = 'Image not available';
+							imgEl.title = resp.status + ' ' + resp.statusText;
+							return;
+						}
+
+						const contentType = resp.headers.get('Content-Type') || '';
+						if (contentType.includes('text')) {
+							const txt = await resp.text();
+							imgEl.alt = 'text/plain';
+							imgEl.title = txt;
+							return;
+						}
+
+						const blob = await resp.blob();
+						const url = URL.createObjectURL(blob);
+						imgEl.src = url;
+					} catch (err) {
+						imgEl.alt = 'Load error';
+						imgEl.title = err.message;
+					}
+				})(p.image, img);
+			});
+		</script>
+	</body>
+</html>

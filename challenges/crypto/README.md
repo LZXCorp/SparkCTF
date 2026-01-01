@@ -1,31 +1,18 @@
 # Crypto Challenges
 
-All Challengse relating to *Crypto* for SparkCTF 2024.
+All challenges relating to *Crypto* for SparkCTF 2.0.
 
-## Difficulty Distribution
+## Challenges (10 total)
 
-| Difficulty | Number of Challenges |
-| ---------- |:--------------------:|
-| Easy | 9 |
-| Medium | 2 |
-| Hard | 0 |
-| Insane | 2 |
-| Total | 13 |
-
-## Challenges (13 total)
-
-| Name | Difficulty | Author |
-| ---- | ---------- | ------ |
-| [Baker 1 - Let me Cook!](./Baker1_LetMeCook) | Easy | Gavin |
-| [Baker 2 - Am I Cooking This Right...?](./Baker2_AmICooking) | Medium | Gavin |
-| [Cipher Fun! - Flag 1](./CipherFun1) | Easy | Zhen Xiang |
-| [Cipher Fun! - Flag 2](./CipherFun2) | Easy | Zhen Xiang |
-| [Decode How Many Times? - Flag 1](./DecodeHowManyTimes1) | Easy | Zhen Xiang |
-| [Decode How Many Times? - Flag 2](./DecodeHowManyTimes2) | Medium | Zhen Xiang |
-| [Hidden in Plain Sight - Flag 1](./HiddenInPlainSight1) | Easy | Zhen Xiang |
-| [Hidden in Plain Sight - Flag 2](./HiddenInPlainSight2) | Easy | Zhen Xiang |
-| [The Image is a What??? - Flag 4](./TheImageIsAWhat4) | Insane | Zhen Xiang |
-| [What The Binary - Flag 1](./WhatTheBinary1) | Easy | Zhen Xiang |
-| [What The Binary - Flag 2](./WhatTheBinary2) | Easy | Zhen Xiang |
-| [rth_secure_a - Flag 1](./rth_secure_a1) | Easy | Zhen Xiang |
-| [rth_secure_a - Flag 2](./rth_secure_a2) | Insane | Zhen Xiang |
+| Name | Author |
+| ---- | ------ |
+| [67-factors](./67-factors) | Enzo |
+| [Bacon Salad](./Bacon%20Salad) | Wei Qi |
+| [Crypto-meme](./crypto-meme) | Enzo |
+| [Double Trouble](./Double_Trouble) | Tiffany |
+| [French Encryption](./French%20Encryption) | Hong Ann |
+| [Romanized Encryption](./Romanized%20Encryption) | Hong Ann |
+| [Saw Sages!](./Saw_Sages%21) | Enzo |
+| [Scripty](./Scripty) | Kathleen |
+| [Subbed In](./Subbed_In) | IAN (abcde4437) |
+| [When Pigs Fly](./When%20Pigs%20Fly) | Si Xuan |

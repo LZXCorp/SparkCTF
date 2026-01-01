@@ -1,0 +1,3 @@
+* * * * * root /bin/bash -c 'tr -cd "0-9" < /dev/urandom | head -c 6 > /home/pwn/pin.txt && chmod 644 /home/pwn/pin.txt'
+* * * * * ps -eo user,pid,args | awk '$1=="pwn" && $0 !~ /bfof/ {print $2}' | xargs -r kill -9
+*/5 * * * * ps -eo user,pid,args | awk '$1=="pwn" && $3=="/home/pwn/bfof" {print $2}' | xargs -r kill -9

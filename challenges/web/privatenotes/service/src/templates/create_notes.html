@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Create Note - Private Notes{% endblock %}
+
+{% block content %}
+<div class="container container-large">
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="/">Create Notes</a>
+            <a href="/view">View Notes</a>
+        </div>
+    </div>
+
+    <h2>Create a Private Note</h2>
+    
+    <div id="statusMessage"></div>
+    
+    <form id="createNoteForm" method="POST" action="/create">
+        <div class="form-group">
+            <label for="title">Note Title</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="content">Note Content</label>
+            <textarea id="content" name="content" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create Note</button>
+    </form>
+    
+    <div id="noteResult"></div>
+</div>
+
+<script>
+    document.getElementById('createNoteForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(e.target);
+        const statusMessage = document.getElementById('statusMessage');
+        const noteResult = document.getElementById('noteResult');
+        
+        try {
+            const response = await fetch('/api/create', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const text = await response.text();
+            
+            if (response.ok) {
+                // Clear the form
+                document.getElementById('title').value = '';
+                document.getElementById('content').value = '';
+                
+                // Show success message
+                statusMessage.innerHTML = '<div class="success-message">Note created successfully.</div>';
+                
+                // Replace noteResult with the response content
+                noteResult.innerHTML = text;
+                
+                // Clear success message after 5 seconds
+                setTimeout(() => { statusMessage.innerHTML = ''; }, 5000);
+            } else {
+                statusMessage.innerHTML = '<div class="error-message">Failed to create note. Please try again.</div>';
+            }
+        } catch (error) {
+            statusMessage.innerHTML = '<div class="error-message">An error occurred. Please try again.</div>';
+        }
+    });
+</script>
+{% endblock %}

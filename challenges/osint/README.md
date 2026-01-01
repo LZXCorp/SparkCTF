@@ -1,31 +1,16 @@
-# Osint Challenges
+# OSINT Challenges
 
-All Challengse relating to *Osint* for SparkCTF 2024.
+All challenges relating to *OSINT* for SparkCTF 2.0.
 
-## Difficulty Distribution
+## Challenges (8 total)
 
-| Difficulty | Number of Challenges |
-| ---------- |:--------------------:|
-| Easy | 8 |
-| Medium | 4 |
-| Hard | 1 |
-| Insane | 0 |
-| Total | 13 |
-
-## Challenges (13 total)
-
-| Name | Difficulty | Author |
-| ---- | ---------- | ------ |
-| [A Sigma Boomer](./ASigmaBoomer) | Medium | Zhen Xiang |
-| [After Macs - Flag 1](./AfterMacs1) | Medium | Zhen Xiang |
-| [After Macs - Flag 2](./AfterMacs2) | Easy | Zhen Xiang |
-| [Asset No. 1](./osint_assetno_1) | Easy | Sayed Hamzah |
-| [Bicycle Shopping](./bicycle_shopping) | Medium | Ian |
-| [Building Location 1](./osint_buildloc_1) | Easy | Sayed Hamzah |
-| [Building Location 2](./osint_buildloc_2) | Easy | Sayed Hamzah |
-| [Finding Tiffany](./FindingTiffany) | Hard | Justin |
-| [Honey In School](./HoneyInSchool) | Easy | Justin |
-| [Jolly Holiday](./JollyHoliday) | Easy | Justin |
-| [OSINT Warmup](./osing_warmup) | Easy | Sayed Hamzah |
-| [Power Capping](./PowerCapping) | Medium | Zhen Xiang |
-| [Scenery 101](./Scenery_101) | Easy | Justin |
+| Name | Author |
+| ---- | ------ |
+| [BobaQuest](./BobaQuest) | Wei Qi |
+| [Cellhunt](./Cellhunt) | Tiffany |
+| [Date Night](./Date_Night) | Trixy Faure-Field |
+| [Hidden Siew](./Hidden%20Siew) | Pui Kei |
+| [Jarvis Is Lost!](./Jarvis_Is_Lost) | Trixy Faure-Field |
+| [LostDNS](./LostDNS) | Edwin |
+| [Past Times](./Past%20Times) | Enzo |
+| [Ramen Hunt](./Ramen%20Hunt) | Justin |

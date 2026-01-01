@@ -1,0 +1,14 @@
+The Spectral Archive
+They say the easiest way to hide a secret is in plain sight, but here, the secret is hidden in plain code.
+
+It began during an anomaly hunt. You were traversing the deep web, searching for unexplained digital phenomena, when your link analyzer flagged an endpoint with a terrifyingly clean signature: "https://www.google.com/search?q=The+Phantom+Page". Against every warning, you established a connection.
+
+The screen stabilized on a static display, but you immediately sensed a phantom presence. A cold data ghost attached itself to your session. Though the source code looked benign, a subtle, invisible execution was running beneath the surface. You could feel the unexpected drag on your system resources.
+
+You inspect the Console—it is silent, clean, offering only distracting lines of static. But you know the truth: a script has loaded. It executed in a flash, consuming a brief memory burst before vanishing, leaving behind only the faintest digital residue.
+
+The clues are not in the visible source. The code-ghost has hidden its payload in the most unassuming of digital corners, relying on obfuscation to bypass casual inspection.
+
+To uncover the secret flag, you must prove the existence of this phantom script. Track its network footprints, find the fragments it left behind, and decode the transmission. Only those who dare to inspect the invisible will capture the final trace.
+
+Will you succeed in capturing the phantom, or will the page vanish, leaving you trapped in the digital static forever?

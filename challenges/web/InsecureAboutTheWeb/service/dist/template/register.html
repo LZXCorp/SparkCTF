@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head><title>Register</title></head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <body>
+    <h2>Create an account</h2>
+    <form method="post" action="/register">
+      <label>Username: <input name="username" required></label><br>
+      <label>Password: <input type="password" name="password" required></label><br>
+      <label>Name: <input name="name"></label><br>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/">Login here</a></p>
+  </body>
+<footer> SparkCTF </footer>
+</html>

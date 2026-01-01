@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A highly classified interface for tracking spectral anomalies and phantom scripts within the S.I.A. network. Authorized access only.">
+    <meta name="keywords" content="spectral, anomaly, phantom, ghost, script, web, data, archive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Phantom Page | Spectral Archives</title>
+    
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CONSOLIDATED STYLES FOR SPECTRAL THEME -->
+    <style>
+        /* CSS Variables */
+        :root {
+            --color-primary: #030303;
+            --color-accent: #00ff66; /* Neon Green */
+            --color-shadow: rgba(0, 255, 102, 0.5);
+            --color-text: #e0e0e0;
+            --border-width: 2px;
+            --glitch-speed: 0.1s;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-shadow: 0 0 2px var(--color-accent);
+        }
+
+        /* Container & Layout */
+        .app-wrapper {
+            display: flex;
+            width: 98vw;
+            max-width: 1600px;
+            min-height: 98vh;
+            margin: 1vh auto;
+            border: var(--border-width) solid var(--color-accent);
+            box-shadow: 0 0 15px var(--color-shadow), inset 0 0 10px var(--color-shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar-nav {
+            width: 250px;
+            background-color: rgba(0, 50, 0, 0.1);
+            border-right: var(--border-width) solid var(--color-accent);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .nav-header {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 10px 0 30px;
+            color: var(--color-accent);
+            text-shadow: 0 0 5px var(--color-shadow);
+            border-bottom: 1px dashed rgba(0, 255, 102, 0.2);
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--color-text);
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+            border-left: 5px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(0, 255, 102, 0.1);
+            color: var(--color-accent);
+            border-left-color: var(--color-accent);
+        }
+
+        .nav-item.active {
+            background-color: rgba(0, 255, 102, 0.2);
+            color: var(--color-accent);
+            font-weight: bold;
+            border-left-color: var(--color-accent);
+            box-shadow: inset 5px 0 10px rgba(0, 255, 102, 0.3);
+        }
+        
+        .nav-item.disabled {
+            color: #555;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
+        .status-indicator {
+            text-align: center;
+            padding: 15px;
+            border-top: 1px dashed rgba(0, 255, 102, 0.2);
+            font-size: 0.8rem;
+        }
+        
+        .status-indicator.online {
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .system-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 255, 102, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-shadow: 0 0 10px var(--color-shadow);
+        }
+
+        .user-info {
+            font-size: 0.85rem;
+            text-align: right;
+        }
+
+        .user-id, .timestamp {
+            display: block;
+            margin-top: 2px;
+            color: var(--color-accent);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0;
+            text-shadow: 0 0 5px var(--color-shadow);
+        }
+        
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.5rem; }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Content Boxes */
+        .content-box {
+            background-color: rgba(0, 255, 102, 0.05);
+            border: 1px solid rgba(0, 255, 102, 0.2);
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .warning-text {
+            color: #ff3333;
+            border: 1px solid #ff3333;
+            padding: 10px;
+            margin: 15px 0;
+            background-color: rgba(255, 51, 51, 0.1);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+            animation: pulse-warn 1.5s infinite alternate;
+        }
+        
+        @keyframes pulse-warn {
+            0% { box-shadow: 0 0 5px rgba(255, 51, 51, 0.5); }
+            100% { box-shadow: 0 0 15px rgba(255, 51, 51, 1); }
+        }
+
+        .hint-text {
+            color: #ccff00;
+            font-style: italic;
+            border-left: 5px solid #ccff00;
+            padding-left: 10px;
+            margin: 15px 0;
+        }
+
+        /* Log Viewer */
+        .system-logs {
+            max-height: 250px;
+            overflow-y: scroll;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: 1px dashed var(--color-accent);
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .log-entry {
+            margin: 5px 0;
+            white-space: pre-wrap;
+            opacity: 0.8;
+        }
+
+        .log-entry strong {
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        /* Glitch Effects (User-provided, enhanced) */
+        .glitch-layer {
+            position: relative; /* Ensure ::before/::after position relative to this */
+        }
+        
+        .glitch-layer::before { 
+            content: attr(data-text); 
+            position: absolute; 
+            top: 0; 
+            left: 2px; 
+            text-shadow: -1px 0 red; 
+            clip: rect(44px, 450px, 56px, 0); 
+            animation: glitch 5s infinite alternate-reverse; 
+            color: var(--color-accent);
+        }
+        
+        .glitch-layer::after { 
+            content: attr(data-text); 
+            position: absolute; 
+            top: 0; 
+            left: -2px; 
+            text-shadow: 1px 0 blue; 
+            clip: rect(85px, 450px, 100px, 0); 
+            animation: glitch 5.5s infinite alternate; 
+            color: var(--color-accent);
+        }
+        
+        @keyframes glitch { 
+            0% { clip: rect(10px, 9999px, 30px, 0); } 
+            50% { clip: rect(50px, 9999px, 80px, 0); } 
+            100% { clip: rect(10px, 9999px, 30px, 0); } 
+        }
+
+        /* Utility classes */
+        .blink {
+            animation: blinker 1s steps(1, end) infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+        
+        .hidden-tracker { 
+            display: none !important; 
+            visibility: hidden !important; 
+        }
+
+        /* Grid System Placeholder Styling */
+        .data-grid-status h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .grid-system-placeholder { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+            gap: 5px; 
+            opacity: 0.1; /* Keep it subtle/decoy */
+            padding: 10px;
+            border: 1px solid rgba(0, 255, 102, 0.1);
+            border-radius: 5px;
+        }
+        
+        .grid-item {
+            text-align: center;
+            padding: 5px 2px;
+            font-size: 0.7rem;
+            border-radius: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 15px;
+            text-align: center;
+            border-top: 1px dashed rgba(0, 255, 102, 0.2);
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 20px;
+            width: 100%;
+            position: sticky;
+            bottom: 0;
+            background-color: var(--color-primary);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 900px) {
+            .app-wrapper {
+                flex-direction: column;
+                width: 99vw;
+                min-height: auto;
+            }
+            .sidebar-nav {
+                width: 100%;
+                border-right: none;
+                border-bottom: var(--border-width) solid var(--color-accent);
+                padding: 10px 0;
+            }
+            .menu {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-item {
+                padding: 10px 15px;
+                border-left: none;
+                border-bottom: 3px solid transparent;
+            }
+            .nav-item.active {
+                border-left: none;
+                border-bottom-color: var(--color-accent);
+                box-shadow: 0 5px 10px rgba(0, 255, 102, 0.3);
+            }
+            .system-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .user-info {
+                margin-top: 10px;
+                text-align: left;
+            }
+        }
+        
+        /* The invisible glitch layer to overlay on top of the content - intentionally empty for later JS */
+        .glitch-layer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+    </style>
+    
+    <!-- Preload hint for the phantom script -->
+    <link rel="preload" href="/assets/ghost.js" as="script">
+</head>
+<body>
+
+    <div id="app-wrapper" class="app-wrapper">
+        <aside class="sidebar-nav">
+            <div class="nav-header">S.I.A. Portal</div>
+            <nav class="menu">
+                <a href="#dashboard" class="nav-item active">DASHBOARD</a>
+                <a href="#archives" class="nav-item">ARCHIVE DUMPS</a>
+                <a href="#analysis" class="nav-item">LIVE ANALYSIS</a>
+                <a href="#settings" class="nav-item disabled">CONFIGURATION</a>
+                <div class="status-indicator online">SYSTEM ONLINE</div>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="system-header">
+                <div class="logo">
+                    <span class="glitch-layer" data-text="SPECTRAL INTELLIGENCE">SPECTRAL INTELLIGENCE</span>
+                </div>
+                <div class="user-info">
+                    <span class="user-id">AGENT: P-450-ALPHA</span>
+                    <span class="timestamp" id="current-time"></span>
+                </div>
+            </header>
+
+            <div class="container">
+                <h1>Spectral Archive Access</h1>
+                <h2>Document P-450: The Phantom Script</h2>
+                <div class="content-box">
+                    <p>Access to this page is inherently unstable. Anomaly detection system has logged a brief but critical breach. The source is identified as a **phantom script**—a digital construct that is momentarily loaded, executes a payload, and then vanishes from the DOM, rendering it impossible to observe through conventional front-end inspection methods. Only the residual trace of its network signature remains in the deep packet echo analysis queue.</p>
+                    
+                    <p class="warning-text">
+                        <span class="blink">WARNING:</span> Analysis indicates the phantom script payload contains encoded data structures, possibly fragmented, and designed to evade standard runtime interpretation. Manual, low-level inspection of the network traffic and script asset is required to reconstruct the anomaly signature.
+                    </p>
+                    
+                    <p class="hint-text">If you feel a brief shiver, it's a sign. The secret is near, but not visible. **Inspect the invisible.**</p>
+                    
+                    <div class="visual-anomaly">
+                        <svg width="100%" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" class="ghost-svg">
+                            <defs>
+                                <filter id="f1" x="0" y="0">
+                                    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+                                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+                                </filter>
+                                <linearGradient id="ghostGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00ff66;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#003300;stop-opacity:0.2" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 200 150 C 250 50, 450 50, 500 150 L 500 180 C 450 160, 250 160, 200 180 Z" fill="url(#ghostGradient)" filter="url(#f1)"/>
+                            <circle cx="300" cy="100" r="10" fill="#ccff00" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7; 0.2; 0.7" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="400" cy="100" r="10" fill="#ccff00" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7; 0.9; 0.7" dur="3s" begin="0.5s" repeatCount="indefinite" />
+                            </circle>
+                            <!-- Decoy data stream lines -->
+                            <rect x="50" y="30" width="10" height="1" fill="#00ff66" opacity="0.3"/>
+                            <rect x="600" y="150" width="5" height="1" fill="#00ff66" opacity="0.4"/>
+                            <rect x="150" y="180" width="2" height="1" fill="#00ff66" opacity="0.2"/>
+                            <rect x="700" y="50" width="15" height="1" fill="#00ff66" opacity="0.5"/>
+                            <rect x="250" y="20" width="8" height="1" fill="#00ff66" opacity="0.6"/>
+                            <rect x="450" y="190" width="12" height="1" fill="#00ff66" opacity="0.3"/>
+                            <rect x="100" y="10" width="3" height="1" fill="#00ff66" opacity="0.7"/>
+                            <rect x="350" y="170" width="6" height="1" fill="#00ff66" opacity="0.4"/>
+                            <rect x="550" y="80" width="10" height="1" fill="#00ff66" opacity="0.8"/>
+                            <rect x="750" y="120" width="4" height="1" fill="#00ff66" opacity="0.2"/>
+                            <rect x="50" y="190" width="10" height="1" fill="#00ff66" opacity="0.9"/>
+                        </svg>
+                        <p class="log-entry">Visualization: **Anomaly Signature Stable** (T+10ms)</p>
+                    </div>
+
+                    <div class="system-logs">
+                        <h3>[SYSTEM LOGS]</h3>
+                        <p class="log-entry">[00:00:00] Initializing core SPECTRA components...</p>
+                        <p class="log-entry">[00:00:01] Auth Token Verified. Session ID: **4a8c9b2f-e3d0-4f1c-b7a5-67c1e5d9f0b3**</p>
+                        <p class="log-entry">[00:00:03] Loading UI Component: `sidebar-nav.js`</p>
+                        <p class="log-entry">[00:00:04] Loading Data Module: `archive-manifest-0xDEADBEEF.json`</p>
+                        <p class="log-entry">[00:00:05] WARNING: External resource request detected: **`/assets/ghost.js`**</p>
+                        <p class="log-entry">[00:00:06] External resource response: **200 OK (MIME: application/javascript)**</p>
+                        <p class="log-entry">[00:00:07] Resource **`/assets/ghost.js`** successfully loaded and executed.</p>
+                        <p class="log-entry">[00:00:08] ERROR: Script execution trace terminated prematurely (Exit Code: 0x450).</p>
+                        <p class="log-entry">[00:00:09] Auto-purge successful. Script removed from memory stack.</p>
+                        <p class="log-entry">[00:00:10] Analysis module reports: **Data payload extraction failed.** (Status: PENDING_MANUAL_REVIEW)</p>
+                        <p class="log-entry">[00:00:11] Displaying Warning and Hint text for Operator intervention.</p>
+                        <p class="log-entry">[00:00:12] System running normally. Awaiting operator input.</p>
+                        <p class="log-entry hidden-tracker">[00:00:13] Padding Line 1: Checksum verification 0x1a2b3c4d...</p>
+                        <p class="log-entry hidden-tracker">[00:00:14] Padding Line 2: Decoy module initialisation. Target: 0x3d2c1b4a</p>
+                        <p class="log-entry hidden-tracker">[00:00:15] Padding Line 3: Falsifying telemetry data stream. Rate: 100kb/s</p>
+                        <p class="log-entry hidden-tracker">[00:00:16] Padding Line 4: Memory optimization routine. Status: OK</p>
+                        <p class="log-entry hidden-tracker">[00:00:17] Padding Line 5: Background process PID 889 completed.</p>
+                        <p class="log-entry hidden-tracker">[00:00:18] Padding Line 6: Resource cleanup finished.</p>
+                        <p class="log-entry hidden-tracker">[00:00:19] Padding Line 7: Sector scan initialized.</p>
+                        <p class="log-entry hidden-tracker">[00:00:20] Padding Line 8: Network latency spike detected (1ms).</p>
+                        <p class="log-entry hidden-tracker">[00:00:21] Padding Line 9: Database connection pool refreshed.</p>
+                        <p class="log-entry hidden-tracker">[00:00:22] Padding Line 10: Monitoring loop running.</p>
+                    </div>
+
+                    <div class="data-grid-status">
+                        <h4>[DECOY DATA MATRIX]</h4>
+                        <div class="grid-system-placeholder">
+                            <div class="grid-item status-ok">D-41A</div>
+                            <div class="grid-item status-warn">E-52B</div>
+                            <div class="grid-item status-ok">F-63C</div>
+                            <div class="grid-item status-fail">G-74D</div>
+                            <div class="grid-item status-ok">H-85E</div>
+                            <div class="grid-item status-warn">I-96F</div>
+                            <div class="grid-item status-ok">J-07G</div>
+                            <div class="grid-item status-fail">K-18H</div>
+                            <div class="grid-item status-ok">L-29I</div>
+                            <div class="grid-item status-warn">M-30J</div>
+                            <div class="grid-item status-ok">N-41K</div>
+                            <div class="grid-item status-fail">O-52L</div>
+                            <div class="grid-item status-ok">P-63M</div>
+                            <div class="grid-item status-warn">Q-74N</div>
+                            <div class="grid-item status-ok">R-85O</div>
+                            <div class="grid-item status-fail">S-96P</div>
+                            <div class="grid-item status-ok">T-07Q</div>
+                            <div class="grid-item status-warn">U-18R</div>
+                            <div class="grid-item status-ok">V-29S</div>
+                            <div class="grid-item status-fail">W-30T</div>
+                            <div class="grid-item status-ok">X-41U</div>
+                            <div class="grid-item status-warn">Y-52V</div>
+                            <div class="grid-item status-ok">Z-63W</div>
+                            <div class="grid-item status-fail">A-74X</div>
+                            <div class="grid-item status-ok">B-85Y</div>
+                            <div class="grid-item status-warn">C-96Z</div>
+                            <div class="grid-item status-ok">D-07A</div>
+                            <div class="grid-item status-fail">E-18B</div>
+                            <div class="grid-item status-ok">F-29C</div>
+                            <div class="grid-item status-warn">G-30D</div>
+                            <div class="grid-item status-ok">H-41E</div>
+                            <div class="grid-item status-fail">I-52F</div>
+                            <div class="grid-item status-ok">J-63G</div>
+                            <div class="grid-item status-warn">K-74H</div>
+                            <div class="grid-item status-ok">L-85I</div>
+                            <div class="grid-item status-fail">M-96J</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <p>Interface Status: **Operational / Degraded Mode**</p>
+                    <p>&copy; 2025 Spectral Intelligence Agency | Access Level: CLASSIFIED P-450</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        
+        const MAX_ENTROPY_LEVEL = 1000;
+        let currentEntropy = 0;
+        let running = false;
+        
+        function initEntropyMonitor() {
+            console.log("Entropy monitor initialized. Running decoy sequence...");
+            running = true;
+            const stateVector = [];
+            for (let i = 0; i < 250; i++) {
+                stateVector.push({ 
+                    id: i, 
+                    value: Math.random(), 
+                    checksum: `0x${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`,
+                    active: i % 7 === 0 
+                });
+                
+                if (i % 5 === 0) {
+                    currentEntropy += Math.floor(Math.random() * 10);
+                }
+                
+                /* for (let j = 0; j < 2; j++) {
+                    const temp = 0;
+                    if (temp === 0) continue; 
+                }
+                */
+            }
+
+            checkSpectralIntegrity(stateVector, 0);
+        }
+
+        function checkSpectralIntegrity(vector, index) {
+            if (!running || index >= vector.length) {
+                console.log("Integrity check complete. Final entropy:", currentEntropy);
+                return;
+            }
+
+            const item = vector[index];
+            
+            if (item.active && item.value > 0.8) {
+            } else if (item.checksum.length < 8) {
+                currentEntropy++;
+            }
+        }
+
+        const utility_function_1 = (a, b) => a + b + Math.random();
+        const utility_function_2 = (x) => {
+            const z = x * 1.5;
+            let result = z - 10;
+            if (result < 0) result = 0;
+            return result;
+        };
+        
+        const core_data_processor = (data) => {
+            const processed = [];
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].value > 0.5) {
+                    processed.push(utility_function_1(data[i].id, utility_function_2(data[i].value)));
+                } else {
+                    processed.push(data[i].id);
+                }
+            }
+            return processed.filter(x => x > 0);
+        };
+
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('current-time');
+            if (timeElement) {
+                timeElement.textContent = now.toLocaleTimeString('en-US', { hour12: false }) + ' | ' + now.toLocaleDateString();
+            }
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+        
+        let paddingVar1 = 0;
+        let paddingVar2 = false;
+        let paddingVar3 = 'placeholder_string_alpha';
+        
+        function paddingFunctionA(i) {
+            for (let k = 0; k < 5; k++) {
+                paddingVar1 += k * i;
+                paddingVar2 = !paddingVar2;
+            }
+            return paddingVar1;
+        }
+        
+        function paddingFunctionB(arr) {
+            let total = 0;
+            arr.forEach(item => {
+                total += item;
+                if (total > 1000000) {
+                    total = 0;
+                }
+            });
+            return total;
+        }
+
+        const variable_a1 = 1;
+        const variable_a2 = 2;
+        const variable_a3 = 3;
+        const variable_a4 = 4;
+        const variable_a5 = 5;
+        const variable_a6 = 6;
+        const variable_a7 = 7;
+        const variable_a8 = 8;
+        const variable_a9 = 9;
+        const variable_a10 = 10;
+        const variable_a11 = 11;
+        const variable_a12 = 12;
+        const variable_a13 = 13;
+        const variable_a14 = 14;
+        const variable_a15 = 15;
+        const variable_a16 = 16;
+        const variable_a17 = 17;
+        const variable_a18 = 18;
+        const variable_a19 = 19;
+        const variable_a20 = 20;
+        const variable_b1 = 'b1_padding';
+        const variable_b2 = 'b2_padding';
+        const variable_b3 = 'b3_padding';
+        const variable_b4 = 'b4_padding';
+        const variable_b5 = 'b5_padding';
+        const variable_b6 = 'b6_padding';
+        const variable_b7 = 'b7_padding';
+        const variable_b8 = 'b8_padding';
+        const variable_b9 = 'b9_padding';
+        const variable_b10 = 'b10_padding';
+        const variable_c1 = true;
+        const variable_c2 = false;
+        const variable_c3 = true;
+        const variable_c4 = false;
+        const variable_c5 = true;
+        const variable_c6 = false;
+        const variable_c7 = true;
+        const variable_c8 = false;
+        const variable_c9 = true;
+        const variable_c10 = false;
+        const variable_d1 = 0.1;
+        const variable_d2 = 0.2;
+        const variable_d3 = 0.3;
+        const variable_d4 = 0.4;
+        const variable_d5 = 0.5;
+        const variable_d6 = 0.6;
+        const variable_d7 = 0.7;
+        const variable_d8 = 0.8;
+        const variable_d9 = 0.9;
+        const variable_d10 = 1.0;
+        const variable_e1 = [1, 2, 3];
+        const variable_e2 = [4, 5, 6];
+        const variable_e3 = [7, 8, 9];
+        const variable_e4 = [10, 11, 12];
+        const variable_e5 = [13, 14, 15];
+        const variable_e6 = [16, 17, 18];
+        const variable_e7 = [19, 20, 21];
+        const variable_e8 = [22, 23, 24];
+        const variable_e9 = [25, 26, 27];
+        const variable_e10 = [28, 29, 30];
+        
+        paddingFunctionA(100);
+        paddingFunctionB([10, 20, 30, 40, 50]);
+        let finalDecoyValue = variable_a20 + variable_a1 * 1000;
+        finalDecoyValue = finalDecoyValue - variable_b1.length;
+        if (variable_c10) {
+            finalDecoyValue = 0;
+        }
+    </script>
+</body>
+</html>

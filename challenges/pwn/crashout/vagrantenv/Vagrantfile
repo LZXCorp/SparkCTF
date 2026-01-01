@@ -1,0 +1,329 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "win10_tiny"
+  config.vm.guest = :windows
+  config.vm.communicator = "winrm"
+
+  # binary exploit configurations (flag, binary, forwarded port)
+  config.vm.provision "file", source: "net_crashout.exe", destination: "C:\\Users\\Public\\binsvc.exe"
+  config.vm.provision "file", source: "flag.txt", destination: "C:\\Users\\Public\\flag.txt"
+  config.vm.network "forwarded_port", guest: 35541, host: 35541
+
+  config.vm.provision "shell", privileged: true, inline: <<-SHELL
+
+  # Tailscale Reinstallation Script for Windows
+# This script uninstalls the current version of Tailscale and reinstalls the latest version
+
+# Requires Administrator privileges
+#Requires -RunAsAdministrator
+
+Write-Host "=== Tailscale Reinstallation Script ===" -ForegroundColor Cyan
+Write-Host ""
+
+# Function to check if Tailscale is installed
+function Get-TailscaleInstalled {
+    $tailscale = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "*Tailscale*" }
+    return $tailscale
+}
+
+# Step 1: Check if Tailscale is currently installed
+Write-Host "Checking for existing Tailscale installation..." -ForegroundColor Yellow
+$installedTailscale = Get-TailscaleInstalled
+
+if ($null -eq $installedTailscale) {
+    Write-Host "Tailscale is not currently installed." -ForegroundColor Green
+    $shouldInstall = $true
+} else {
+    Write-Host "Found Tailscale version: $($installedTailscale.Version)" -ForegroundColor Green
+    
+    # Step 2: Uninstall current version
+    Write-Host ""
+    Write-Host "Uninstalling Tailscale..." -ForegroundColor Yellow
+    
+    try {
+        # Stop Tailscale service first
+        $service = Get-Service -Name "Tailscale" -ErrorAction SilentlyContinue
+        if ($service) {
+            Write-Host "Stopping Tailscale service..." -ForegroundColor Yellow
+            Stop-Service -Name "Tailscale" -Force -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 2
+        }
+        
+        # Uninstall using WMI
+        $uninstallResult = $installedTailscale.Uninstall()
+        
+        if ($uninstallResult.ReturnValue -eq 0) {
+            Write-Host "Successfully uninstalled Tailscale." -ForegroundColor Green
+            
+            # Remove Tailscale data folders
+            Write-Host "Removing Tailscale data folders..." -ForegroundColor Yellow
+            
+            $foldersToRemove = @(
+                "C:\\ProgramData\\Tailscale",
+                "$env:LOCALAPPDATA\\Tailscale",
+                "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Tailscale"
+            )
+            
+            foreach ($folder in $foldersToRemove) {
+                if (Test-Path $folder) {
+                    try {
+                        Remove-Item -Path $folder -Recurse -Force -ErrorAction Stop
+                        Write-Host "  Removed: $folder" -ForegroundColor Green
+                    } catch {
+                        Write-Host "  Warning: Could not remove $folder - $($_.Exception.Message)" -ForegroundColor Yellow
+                    }
+                } else {
+                    Write-Host "  Skipped (not found): $folder" -ForegroundColor Gray
+                }
+            }
+            
+            $shouldInstall = $true
+        } else {
+            Write-Host "Failed to uninstall Tailscale. Return code: $($uninstallResult.ReturnValue)" -ForegroundColor Red
+            $shouldInstall = $false
+        }
+    } catch {
+        Write-Host "Error during uninstallation: $_" -ForegroundColor Red
+        $shouldInstall = $false
+    }
+    
+    # Wait a moment for cleanup
+    Start-Sleep -Seconds 3
+}
+
+# Step 3: Download and install latest version
+if ($shouldInstall) {
+    Write-Host ""
+    Write-Host "Downloading latest Tailscale installer..." -ForegroundColor Yellow
+    
+    # Download URL for latest stable version
+    $installerUrl = "https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe"
+    $installerPath = "$env:TEMP\\tailscale-setup-latest.exe"
+    
+    try {
+        # Enable TLS 1.2 for secure downloads
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        
+        # Download the installer using .NET WebClient for better compatibility
+        $webClient = New-Object System.Net.WebClient
+        Write-Host "Downloading from: $installerUrl" -ForegroundColor Gray
+        Write-Host "Saving to: $installerPath" -ForegroundColor Gray
+        $webClient.DownloadFile($installerUrl, $installerPath)
+        
+        # Verify the file was downloaded
+        if (Test-Path $installerPath) {
+            $fileSize = (Get-Item $installerPath).Length / 1MB
+            Write-Host "Download completed. File size: $([math]::Round($fileSize, 2)) MB" -ForegroundColor Green
+        } else {
+            throw "Downloaded file not found at $installerPath"
+        }
+        
+        # Step 4: Install Tailscale
+        Write-Host ""
+        Write-Host "Installing Tailscale..." -ForegroundColor Yellow
+        
+        # Run the installer silently
+        $installProcess = Start-Process -FilePath $installerPath -ArgumentList "/quiet" -Wait -PassThru
+        
+        if ($installProcess.ExitCode -eq 0) {
+            Write-Host "Tailscale has been successfully installed!" -ForegroundColor Green
+            
+            # Clean up installer
+            Remove-Item -Path $installerPath -Force -ErrorAction SilentlyContinue
+            
+            Write-Host ""
+            Write-Host "Installation complete. You can now run 'tailscale up' to connect." -ForegroundColor Cyan
+        } else {
+            Write-Host "Installation failed with exit code: $($installProcess.ExitCode)" -ForegroundColor Red
+        }
+    } catch {
+        Write-Host "Error during download or installation: $($_.Exception.Message)" -ForegroundColor Red
+        if ($_.Exception.InnerException) {
+            Write-Host "Inner exception: $($_.Exception.InnerException.Message)" -ForegroundColor Red
+        }
+        Write-Host ""
+        Write-Host "Troubleshooting tips:" -ForegroundColor Yellow
+        Write-Host "1. Check your internet connection" -ForegroundColor Yellow
+        Write-Host "2. Verify you can access: https://pkgs.tailscale.com" -ForegroundColor Yellow
+        Write-Host "3. Check if a firewall or proxy is blocking the download" -ForegroundColor Yellow
+        Write-Host "4. Try downloading manually from: $installerUrl" -ForegroundColor Yellow
+    }
+} else {
+    Write-Host ""
+    Write-Host "Installation cancelled due to uninstallation failure." -ForegroundColor Red
+}
+
+Write-Host ""
+Write-Host "Script completed." -ForegroundColor Cyan
+
+SHELL
+
+  # Download and install NSSM (Non-Sucking Service Manager)
+  config.vm.provision "shell", privileged: true, inline: <<-SHELL
+    $nssmPath = "C:\\Windows\\System32\\nssm.exe"
+
+    if (-not (Test-Path $nssmPath)) {
+      Write-Host "Downloading NSSM..."
+      $nssmUrl = "https://nssm.cc/release/nssm-2.24.zip"
+      $nssmZip = "C:\\Windows\\Temp\\nssm.zip"
+      $nssmExtract = "C:\\Windows\\Temp\\nssm"
+
+      # Download NSSM
+      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+      Invoke-WebRequest -Uri $nssmUrl -OutFile $nssmZip
+
+      # Extract NSSM
+      Expand-Archive -Path $nssmZip -DestinationPath $nssmExtract -Force
+
+      # Copy nssm.exe to System32
+      Copy-Item "$nssmExtract\\nssm-2.24\\win64\\nssm.exe" $nssmPath -Force
+
+      # Cleanup
+      Remove-Item $nssmZip -Force
+      Remove-Item $nssmExtract -Recurse -Force
+
+      Write-Host "NSSM installed successfully"
+    } else {
+      Write-Host "NSSM already installed"
+    }
+  SHELL
+      
+  # Create and configure the Windows service using NSSM
+  config.vm.provision "shell", privileged: true, inline: <<-SHELL
+    # Define service parameters
+    $serviceName = "WinPwn"
+    $serviceUser = "svc_winpwn"
+    $servicePassword = "P@ssw0rd123!"
+    $exePath = "C:\\Users\\Public\\binsvc.exe"
+    $nssmPath = "C:\\Windows\\System32\\nssm.exe"
+    
+    $exePath = "C:\\Users\\Public\\binsvc.exe"
+    $ruleName = "WinPwn Service"
+    $portRuleName = "WinPwn Port 35541"
+
+    # Stop and remove service if it already exists
+    $service = Get-Service -Name $serviceName -ErrorAction SilentlyContinue
+    if ($service) {
+      Write-Host "Removing existing service..."
+      & $nssmPath stop $serviceName
+      & $nssmPath remove $serviceName confirm
+      Start-Sleep -Seconds 2
+    }
+
+    # Create low-privileged user if it doesn't exist
+    $userExists = Get-LocalUser -Name $serviceUser -ErrorAction SilentlyContinue
+    if (-not $userExists) {
+      $securePassword = ConvertTo-SecureString $servicePassword -AsPlainText -Force
+      New-LocalUser -Name $serviceUser `
+                    -Password $securePassword `
+                    -FullName "Net Crashout Service Account" `
+                    -Description "Low-privileged account for WinPwn service" `
+                    -PasswordNeverExpires `
+                    -UserMayNotChangePassword
+      Write-Host "Created low-privileged user: $serviceUser"
+    }
+
+    # Grant the service user permissions on C:\Users\Public directory
+    $publicDir = "C:\\Users\\Public"
+    $aclDir = Get-Acl $publicDir
+    $permissionDir = "$env:COMPUTERNAME\\$serviceUser","Modify","ContainerInherit,ObjectInherit","None","Allow"
+    $accessRuleDir = New-Object System.Security.AccessControl.FileSystemAccessRule $permissionDir
+    $aclDir.SetAccessRule($accessRuleDir)
+    Set-Acl $publicDir $aclDir
+
+    Write-Host "Granted permissions to $serviceUser on $publicDir"
+
+    # Grant "Log on as a service" right to the user
+    $tempPath = [System.IO.Path]::GetTempFileName()
+    secedit /export /cfg $tempPath | Out-Null
+    $content = Get-Content $tempPath
+    $sidUser = (New-Object System.Security.Principal.NTAccount($serviceUser)).Translate([System.Security.Principal.SecurityIdentifier]).Value
+    $content = $content -replace "(SeServiceLogonRight = .*)", "`$1,*$sidUser"
+    Set-Content $tempPath $content
+    secedit /configure /db secedit.sdb /cfg $tempPath /areas USER_RIGHTS | Out-Null
+    Remove-Item $tempPath
+
+    # Install the service using NSSM
+    Write-Host "Installing service with NSSM..."
+    & $nssmPath install $serviceName $exePath
+
+    # Configure the service
+    & $nssmPath set $serviceName DisplayName "WinPwn Service"
+    & $nssmPath set $serviceName Description "Network service that automatically restarts on crash"
+    & $nssmPath set $serviceName Start SERVICE_AUTO_START
+
+    # Set the service to run as the low-privileged user
+    $username = "$env:COMPUTERNAME\\$serviceUser"
+    & $nssmPath set $serviceName ObjectName $username $servicePassword
+
+    # Configure automatic restart on failure
+    & $nssmPath set $serviceName AppThrottle 1000
+    & $nssmPath set $serviceName AppExit Default Restart
+    & $nssmPath set $serviceName AppRestartDelay 1000
+
+    # Set working directory
+    & $nssmPath set $serviceName AppDirectory "C:\\Users\\Public"
+
+    # Remove existing firewall rules if they exist
+    $existingRule = Get-NetFirewallRule -DisplayName $ruleName -ErrorAction SilentlyContinue
+    if ($existingRule) {
+      Write-Host "Removing existing firewall rule for application..."
+      Remove-NetFirewallRule -DisplayName $ruleName
+    }
+
+    $existingPortRule = Get-NetFirewallRule -DisplayName $portRuleName -ErrorAction SilentlyContinue
+    if ($existingPortRule) {
+      Write-Host "Removing existing firewall rule for port..."
+      Remove-NetFirewallRule -DisplayName $portRuleName
+    }
+
+    # Add firewall rule to allow binsvc.exe
+    Write-Host "Adding firewall rule to allow binsvc.exe..."
+    New-NetFirewallRule -DisplayName $ruleName `
+                        -Direction Inbound `
+                        -Program $exePath `
+                        -Action Allow `
+                        -Enabled True `
+                        -Profile Any `
+                        -Description "Allow binary service executable"
+
+    # Add firewall rule to allow TCP port
+    Write-Host "Adding firewall rule to allow TCP port..."
+    New-NetFirewallRule -DisplayName $portRuleName `
+                        -Direction Inbound `
+                        -Protocol TCP `
+                        -LocalPort 35541 `
+                        -Action Allow `
+                        -Enabled True `
+                        -Profile Any `
+                        -Description "Allow binary service on allocated TCP port"
+
+    Write-Host "Firewall rules configured successfully"
+
+    # Verify the rules were created
+    $rules = Get-NetFirewallRule -DisplayName $ruleName, $portRuleName
+    $rules | ForEach-Object {
+      Write-Host "Rule: $($_.DisplayName) - Enabled: $($_.Enabled) - Action: $($_.Action)"
+    }
+
+    # Start the service
+    Write-Host "Starting winpwn service..."
+    & $nssmPath start $serviceName
+
+    $tailscalePath = "C:\\Program Files\\Tailscale\\tailscale.exe"
+    # install tailscale
+    & $tailscalePath up --hostname=crashout --auth-key=tskey-auth-k5X5MjnQX711CNTRL-9QwGer1SLYLQTg7kyHCsXL7Xnk2XAz9EX
+    # Check service status
+    Start-Sleep -Seconds 2
+    $service = Get-Service -Name $serviceName
+    Write-Host "Service Status: $($service.Status)"
+
+    if ($service.Status -eq "Running") {
+      Write-Host "WinPwn service started successfully under user: $serviceUser"
+    } else {
+      Write-Host "Warning: Service is not running. Status: $($service.Status)"
+    }
+  SHELL
+end

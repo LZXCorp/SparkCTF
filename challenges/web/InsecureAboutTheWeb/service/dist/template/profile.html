@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head><title>Profile {{ profile.name }}</title></head>
+<body>
+  <h2>Profile for student {{ profile.student_id }}</h2>
+  <h3>Welcome {{ profile.name }}!</h3>
+  <ul>
+    <li><strong>Name:</strong> {{ profile.name }}</li>
+    <li><strong>Student ID:</strong> {{ profile.student_id }}</li>
+    <li><strong>Notes:</strong> {{ profile.notes }}</li>
+  </ul>
+  <p><a href="/">Login Page</a></p>
+</body>
+<footer> SparkCTF </footer>
+</html>

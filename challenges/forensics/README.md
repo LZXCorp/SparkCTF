@@ -1,32 +1,22 @@
 # Forensics Challenges
 
-All Challengse relating to *Forensics* for SparkCTF 2024.
-
-## Difficulty Distribution
-
-| Difficulty | Number of Challenges |
-| ---------- |:--------------------:|
-| Easy | 4 |
-| Medium | 6 |
-| Hard | 2 |
-| Insane | 2 |
-| Total | 14 |
+All challenges relating to *Forensics* for SparkCTF 2.0.
 
 ## Challenges (14 total)
 
-| Name | Difficulty | Author |
-| ---- | ---------- | ------ |
-| [Baking Binary - Final Flag (Hybrid Challenge)](./BakingBinary) | Insane | Zhen Xiang |
-| [Baking Soda](./BakingSoda) | Easy | Zhen Xiang |
-| [Counting Flags](./CountingFlags) | Hard | Zhen Xiang |
-| [Finding The Flag](./FindingTheFlag) | Easy | Zhen Xiang |
-| [Grocery List - Flag 1](./GroceryList1) | Medium | Zhen Xiang |
-| [Grocery List - Flag 2](./GroceryList2) | Hard | Zhen Xiang |
-| [Lets Hash It Out!](./LetsHashItOut) | Medium | Zhen Xiang |
-| [Psss... Psss...](./PsssPsss) | Medium | Justin |
-| [The Image is a What??? - Flag 1](./TheImageIsAWhat1) | Easy | Zhen Xiang |
-| [The Image is a What??? - Flag 2](./TheImageIsAWhat2) | Medium | Justin |
-| [The Image is a What??? - Flag 3](./TheImageIsAWhat3) | Medium | Zhen Xiang |
-| [This does not SOUND good - Flag 1](./ThisDoesNotSoundGood1) | Easy | Zhen Xiang |
-| [This does not SOUND good - Flag 2](./ThisDoesNotSoundGood2) | Medium | Zhen Xiang |
-| [This does not SOUND good - Flag 3](./ThisDoesNotSoundGood3) | Insane | Zhen Xiang |
+| Name | Author |
+| ---- | ------ |
+| [Behind The Image](./Behind%20The%20Image) | Hadriel |
+| [BrowserFind](./BrowserFind) | Edwin |
+| [Digital Footprints](./Digital%20Footprints) | Justin |
+| [DORA The Explorer](./DORA-The-Explorer) | Edwin |
+| [ForenSeek](./ForenSeek) | Tiffany |
+| [Head Full of Kittens](./Head%20Full%20of%20Kitties) | Kathleen |
+| [Hearing Visually](./Hearing%20Visually) | Enzo |
+| [Hidden From PlainSight](./Hidden%20From%20PlainSight) | Hadriel |
+| [Im Jager Baby!!!](./Im%20Jager%20Baby%21%21%21) | Justin |
+| [MetaMystery](./MetaMystery) | Si Xuan |
+| [Misplaced File Tragedy](./Misplaced%20File%20Tragedy) | Justin |
+| [Password finding](./Password%20Finding) | Kathleen, Puikei |
+| [Siew's Rescue](./Siew%27s%20Rescue) | Pui Kei |
+| [Steg Bit by Bit](./Steg%20Bit%20by%20Bit) | Hadriel |

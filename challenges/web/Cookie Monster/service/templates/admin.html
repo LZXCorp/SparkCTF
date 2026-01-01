@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 10;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ffd700;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    pre {
+      background: rgba(0,0,0,0.2);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      overflow-x: auto;
+      color: #00ff99;
+    }
+
+    /* Falling cookie images */
+    .cookie {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://i.imgur.com/8Q9dN6D.png') no-repeat center/contain;
+      top: -50px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Area</h1>
+    <p>Congratulations — you have unlocked the flag:</p>
+    <pre>{{ flag }}</pre>
+  </div>
+
+  <script>
+    const numCookies = 15;
+    for(let i=0; i<numCookies; i++) {
+      const cookie = document.createElement('div');
+      cookie.className = 'cookie';
+      cookie.style.left = Math.random() * 100 + 'vw';
+      cookie.style.animationDuration = (5 + Math.random() * 5) + 's';
+      cookie.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(cookie);
+    }
+  </script>
+</body>
+</html>

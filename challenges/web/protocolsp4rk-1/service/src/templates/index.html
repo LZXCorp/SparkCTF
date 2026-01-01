@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>protocolsp4rk</title>
+</head>
+
+<body>
+    <div class="scanlines"></div>
+    <main class="console" id="console-root" data-passkey-uuid="{{ passkey_uuid }}">
+        <header class="console__header">
+            <h1>Protocol<span>SP4RK</span><small> mesh</small></h1>
+            <p>Signal routing hub for privileged lattice operators.</p>
+            <div class="status" id="global-status">Standby sequence primed.</div>
+            <div class="flag flag--static">Flag 1: <strong>{{ flag1 }}</strong></div>
+            <div class="flag hidden" id="flag2-banner"></div>
+        </header>
+
+        <section class="panel" id="login-panel">
+            <div class="panel__title">node alpha</div>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" autocomplete="off" placeholder="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="********" required>
+
+                <button type="submit">Login</button>
+                <p class="feedback" id="login-feedback"></p>
+            </form>
+        </section>
+
+        <section class="panel hidden" id="passkey-panel">
+            <div class="panel__title">node beta</div>
+            <div class="passkey-copy">
+                <p>Hardware-backed attestation is required. Use the platform authenticator bound to this mesh.</p>
+            </div>
+            <button type="button" id="passkey-trigger">invoke hardware token</button>
+            <button type="button" id="pin-switch" class="button--ghost hidden">switch to pin mode</button>
+            <p class="feedback" id="passkey-feedback"></p>
+        </section>
+
+        <section class="panel hidden" id="omega-panel">
+            <div class="panel__title">node gamma</div>
+            <form id="fallback-form" class="hidden">
+                <label for="fallback-secret">channel key</label>
+                <input type="password" id="fallback-secret" name="fallback-secret" inputmode="numeric" pattern="\d{4}"
+                    maxlength="4" autocomplete="off" placeholder="####" required>
+                <button type="submit">commit</button>
+                <p class="feedback" id="pin-feedback"></p>
+            </form>
+        </section>
+
+        <section class="panel hidden" id="result-panel">
+            <div class="panel__title">node delta</div>
+            <div class="token-display">
+                <textarea id="jwt-output" readonly></textarea>
+                <button id="copy-token" type="button">copy token</button>
+            </div>
+            <p class="footnote">Session artifact for downstream services. Use with discretion.</p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static_js', filename='protocolsp4rk.js') }}" defer></script>
+</body>
+
+</html>

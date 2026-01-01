@@ -1,30 +1,27 @@
 # Misc Challenges
 
-All Challengse relating to *Misc* for SparkCTF 2024.
+All challenges relating to *Misc* for SparkCTF 2.0.
 
-## Difficulty Distribution
+## Challenges (19 total)
 
-| Difficulty | Number of Challenges |
-| ---------- |:--------------------:|
-| Easy | 4 |
-| Medium | 7 |
-| Hard | 1 |
-| Insane | 0 |
-| Total | 12 |
-
-## Challenges (12 total)
-
-| Name | Difficulty | Author |
-| ---- | ---------- | ------ |
-| [A-1000 - Flag 1](./A1000-1) | Medium | Zhen Xiang |
-| [A-1000 - Flag 2](./A1000-2) | Medium | Zhen Xiang |
-| [Free Roadblockers](./FreeRoadblockers) | Medium | Zhen Xiang |
-| [Fun In The Discord!](./FunInDiscord) | Medium | Zhen Xiang & Gavin |
-| [Guess The Flag](./GuessTheFlag) | Medium | Sayed Hamzah |
-| [Kena RFed](./KenaRFed) | Hard | Sayed Hamzah |
-| [Running Inc](./RunningInc) | Medium | Zhen Xiang |
-| [Welcome to Linux - Flag 1](./WelcomeToLinux1) | Easy | Zhen Xiang |
-| [Welcome to Linux - Flag 2](./WelcomeToLinux2) | Easy | Zhen Xiang |
-| [Welcome to Linux - Flag 3](./WelcomeToLinux3) | Easy | Zhen Xiang |
-| [Why Do You Do This...](./WhyDoYouDoThis) | Easy | Zhen Xiang |
-| [rot-in-hell](./rot-in-hell) | Medium | Sayed Hamzah |
+| Name | Author |
+| ---- | ------ |
+| [cryptrev](./cryptrev) | Sayed Hamzah (@BaeSenseii) |
+| [fANSI phrases](./fANSI%20phrases) | Hong Ann |
+| [GGibberish](./GGibberish) | Ian Tay |
+| [linrev_lvl1](./linrev_lvl1) | Sayed Hamzah (@BaeSenseii) |
+| [linrev_lvl2](./linrev_lvl2) | Sayed Hamzah (@BaeSenseii) |
+| [linrev_lvl3](./linrev_lvl3) | Sayed Hamzah (@BaeSenseii) |
+| [Pixel Puzzle](./Pixel%20Puzzle) | Si Xuan |
+| [Seri-ously?](./Seri-ously) | Ian Tay |
+| [SparkApp - 1](./SparkApp%20-%201) | Sayed Hamzah (@BaeSenseii) |
+| [SparkApp - 2](./SparkApp%20-%202) | Sayed Hamzah (@BaeSenseii) |
+| [SparkApp - 3](./SparkApp%20-%203) | Sayed Hamzah (@BaeSenseii) |
+| [SparkApp - 4](./SparkApp%20-%204) | Sayed Hamzah (@BaeSenseii) |
+| [SparkBot](./SparkBot) | Gavin (@gavintjh) |
+| [SparkMCP](./sparkmcp) | Zhen Xiang |
+| [The Whispering Manuscript](./The%20Whispering%20Manuscript) | Aldric Liew |
+| [What Do You Mean?](./whatdoyoumean) | Sayed Hamzah (@BaeSenseii) |
+| [winrev_lvl1](./winrev_lvl1) | Sayed Hamzah (@BaeSenseii) |
+| [winrev_lvl2](./winrev_lvl2) | Sayed Hamzah (@BaeSenseii) |
+| [winrev_lvl3](./winrev_lvl3) | Sayed Hamzah (@BaeSenseii) |

@@ -1,3 +1,6 @@
 *.ova
 *_Game.zip
 *.mov
+*.env
+
+*/creation/*

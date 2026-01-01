@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>protocolsp4rk flag terminal</title>
+</head>
+
+<body>
+    <div class="scanlines"></div>
+    <main class="console">
+        <section class="panel active">
+            <div class="panel__title">flag terminal</div>
+            {% if flag %}
+            <div class="flag flag--static">Flag 3: <strong>{{ flag }}</strong></div>
+            {% else %}
+            <p>Only admins are allowed to access this webpage.</p>
+            {% endif %}
+            <a class="button--ghost" href="{{ url_for('index') }}">return to console</a>
+        </section>
+    </main>
+</body>
+
+</html>

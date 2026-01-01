@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Private Notes{% endblock %}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: #f3f7fb; /* solid neutral background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 4px;
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .container-large {
+            max-width: 800px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 24px;
+            text-align: center;
+            animation: colorPulse 4s ease infinite;
+        }
+
+        @keyframes colorPulse {
+            0%, 100% {
+                color: #333;
+            }
+            50% {
+                color: #555;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 15px;
+            transition: border-color 0.2s ease;
+            background: #fff;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3aa0d6;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+            font-family: inherit;
+        }
+
+        button,
+        .btn {
+            width: 100%;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #2a7f03;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #349d04;
+        }
+
+        .btn-secondary {
+            background: #f093fb;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #e57fe3;
+        }
+
+        .btn-logout {
+            background: #f7b3c6;
+            color: #333;
+            padding: 8px 12px;
+            width: auto;
+            font-size: 14px;
+        }
+
+        .btn-logout:hover {
+            background: #f2a6b7;
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid #ef4444;
+            color: #dc2626;
+            padding: 10px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            animation: errorFade 0.4s ease;
+        }
+
+        @keyframes errorFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .success-message {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 4px solid #10b981;
+            color: #059669;
+            padding: 10px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            animation: errorFade 0.4s ease;
+        }
+
+        .link-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .link-text a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .link-text a:hover {
+            color: #764ba2;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background: #f0f4ff;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.15s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(0,0,0,0.03);
+        }
+
+        .note-display {
+            background: #fbfcff;
+            border: 1px solid #d6e0ff;
+            border-radius: 4px;
+            padding: 14px;
+            margin-top: 16px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .note-display h3 {
+            color: #3f63b5;
+            margin-bottom: 12px;
+            animation: colorPulse 6s ease infinite;
+        }
+
+        .note-display p {
+            color: #333;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        .status-message {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            animation: errorFade 0.5s ease;
+        }
+    </style>
+    {% block extra_styles %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

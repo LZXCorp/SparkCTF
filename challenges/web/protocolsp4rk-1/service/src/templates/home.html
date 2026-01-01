@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>protocolsp4rk control</title>
+</head>
+
+<body>
+    <div class="scanlines"></div>
+    <main class="console" id="console-root">
+        <header class="console__header">
+            <h1>Protocol<span>SP4RK</span><small> mesh</small></h1>
+            <p>Welcome back, {{ username }}. Mesh routing links remain elevated.</p>
+            <div class="status ok" id="global-status">Session artifact stored. Choose your next vector.</div>
+        </header>
+
+        <section class="panel active" id="home-panel">
+            <div class="panel__title">node delta</div>
+            <p>Select an action below. Administrative artifacts remain sealed.</p>
+            <div class="button-row">
+                <form id="logout-form" action="{{ url_for('logout') }}" method="post">
+                    <button type="submit">log out</button>
+                </form>
+                <a class="button--ghost" id="flag-link" href="{{ url_for('flag') }}">flag terminal</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static_js', filename='protocolsp4rk.js') }}" defer></script>
+</body>
+
+</html>

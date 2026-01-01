@@ -1,0 +1,102 @@
+Sep 25 17:00:01 rhel-dhcp-07.internal systemd[1]: Starting dhcpd.service - DHCPv4 Server Daemon...
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Internet Systems Consortium DHCP Server 4.4.2
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Copyright 2004-2022 Internet Systems Consortium.
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: All rights reserved.
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: For info, please visit https://www.isc.org/software/dhcp/
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Config file: /etc/dhcp/dhcpd.conf
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Database file: /var/lib/dhcpd/dhcpd.leases
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: PID file: /var/run/dhcpd.pid
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Wrote 12 class decls to leases file.
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Wrote 3 host decls to leases file.
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Wrote 47 leases to leases file.
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Listening on LPF/eth0/52:54:00:12:34:56
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Sending on   LPF/eth0/52:54:00:12:34:56
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Listening on LPF/wlan0/aa:bb:cc:dd:ee:ff
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Sending on   LPF/wlan0/aa:bb:cc:dd:ee:ff
+Sep 25 17:00:01 rhel-dhcp-07.internal dhcpd[2867]: Sending on   Socket/fallback
+Sep 25 17:00:01 rhel-dhcp-07.internal systemd[1]: Started dhcpd.service - DHCPv4 Server Daemon.
+Sep 25 17:00:02 rhel-dhcp-07.internal dhcpd[2867]: Pool 172.16.91.0/23 range 172.16.91.100 - 172.16.91.250: 76% used, consider expanding pool
+Sep 25 17:00:22 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.45 from 74:d4:35:8f:92:aa via wlan0
+Sep 25 17:00:22 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.45 to 74:d4:35:8f:92:aa via wlan0
+Sep 25 17:00:38 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.33 from a4:5e:60:c7:89:12 via wlan0
+Sep 25 17:00:38 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.33 to a4:5e:60:c7:89:12 via wlan0
+Sep 25 17:00:45 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 00:50:56:c0:00:08 via wlan0
+Sep 25 17:00:45 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.91.91 to 00:50:56:c0:00:08 via wlan0
+Sep 25 17:00:46 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.91 (172.16.91.1) from 00:50:56:c0:00:08 via wlan0
+Sep 25 17:00:46 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.91 to 00:50:56:c0:00:08 via wlan0
+Sep 25 17:01:12 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 08:00:27:d4:3f:99 via wlan0
+Sep 25 17:01:12 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.92.10 to 08:00:27:d4:3f:99 via wlan0
+Sep 25 17:01:13 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.92.10 (172.16.91.1) from 08:00:27:d4:3f:99 via wlan0
+Sep 25 17:01:13 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.92.10 to 08:00:27:d4:3f:99 via wlan0
+Sep 25 17:01:29 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 3c:a8:2a:4b:77:c9 via wlan0
+Sep 25 17:01:29 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 192.168.100.108 to 3c:a8:2a:4b:77:c9 via wlan0
+Sep 25 17:01:30 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.108 (192.168.100.1) from 3c:a8:2a:4b:77:c9 via wlan0
+Sep 25 17:01:30 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.108 to 3c:a8:2a:4b:77:c9 via wlan0
+Sep 25 17:01:55 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from b4:2e:99:8a:71:33 via wlan0
+Sep 25 17:01:55 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 192.168.100.42 to b4:2e:99:8a:71:33 via wlan0
+Sep 25 17:01:56 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.42 (192.168.100.1) from b4:2e:99:8a:71:33 via wlan0
+Sep 25 17:01:56 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.42 to b4:2e:99:8a:71:33 via wlan0
+Sep 25 17:02:14 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 88:51:fb:2c:a5:e7 via wlan0
+Sep 25 17:02:15 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.91.177 to 88:51:fb:2c:a5:e7 via wlan0
+Sep 25 17:02:16 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.177 (172.16.91.1) from 88:51:fb:2c:a5:e7 via wlan0
+Sep 25 17:02:16 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.177 to 88:51:fb:2c:a5:e7 via wlan0
+Sep 25 17:02:33 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:02:33 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 192.168.100.65 to 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:02:34 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.65 (192.168.100.1) from 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:02:34 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.65 to 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:02:51 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:02:51 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 192.168.100.89 to 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:02:52 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.89 (192.168.100.1) from 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:02:52 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:02:53 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 192.168.100.89 to 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:02:54 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.89 (192.168.100.1) from 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:02:54 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.89 to 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:03:18 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 00:0c:29:8e:74:a1 via wlan0
+Sep 25 17:03:18 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.91.254 to 00:0c:29:8e:74:a1 via wlan0
+Sep 25 17:03:19 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.254 (172.16.91.1) from 00:0c:29:8e:74:a1 via wlan0
+Sep 25 17:03:19 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.254 to 00:0c:29:8e:74:a1 via wlan0
+Sep 25 17:03:21 rhel-dhcp-07.internal dhcpd[2867]: uid lease 192.168.100.77 for client 6c:4b:90:12:ed:33 is 2592000 seconds in the future.
+Sep 25 17:03:41 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from f0:18:98:4d:e2:77 via wlan0
+Sep 25 17:03:42 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.91.134 to f0:18:98:4d:e2:77 via wlan0
+Sep 25 17:03:42 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.134 (172.16.91.1) from f0:18:98:4d:e2:77 via wlan0
+Sep 25 17:03:43 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.134 to f0:18:98:4d:e2:77 via wlan0
+Sep 25 17:04:07 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 3c:97:0e:2f:1a:88 via wlan0
+Sep 25 17:04:07 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 192.168.100.91 to 3c:97:0e:2f:1a:88 via wlan0
+Sep 25 17:04:08 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.91 (192.168.100.1) from 3c:97:0e:2f:1a:88 via wlan0
+Sep 25 17:04:08 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.91 to 3c:97:0e:2f:1a:88 via wlan0
+Sep 25 17:04:25 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 68:ec:c5:aa:12:9f via wlan0
+Sep 25 17:04:26 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.92.88 to 68:ec:c5:aa:12:9f via wlan0
+Sep 25 17:04:26 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.92.88 (172.16.91.1) from 68:ec:c5:aa:12:9f via wlan0
+Sep 25 17:04:27 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.92.88 to 68:ec:c5:aa:12:9f via wlan0
+Sep 25 17:04:44 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.33 from a4:5e:60:c7:89:12 via wlan0
+Sep 25 17:04:44 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.33 to a4:5e:60:c7:89:12 via wlan0
+Sep 25 17:04:55 rhel-dhcp-07.internal dhcpd[2867]: DHCPDISCOVER from 52:54:00:ab:cd:ef via wlan0
+Sep 25 17:04:55 rhel-dhcp-07.internal dhcpd[2867]: DHCPOFFER on 172.16.91.102 to 52:54:00:ab:cd:ef via wlan0
+Sep 25 17:04:56 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.102 (172.16.91.1) from 52:54:00:ab:cd:ef via wlan0
+Sep 25 17:04:56 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.102 to 52:54:00:ab:cd:ef via wlan0
+Sep 25 17:05:22 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.65 from 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:05:22 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.65 to 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:05:38 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.108 from 3c:a8:2a:4b:77:c9 via wlan0
+Sep 25 17:05:38 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.108 to 3c:a8:2a:4b:77:c9 via wlan0
+Sep 25 17:06:01 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.91 from 00:50:56:c0:00:08 via wlan0
+Sep 25 17:06:01 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.91 to 00:50:56:c0:00:08 via wlan0
+Sep 25 17:06:02 rhel-dhcp-07.internal dhcpd[2867]: wlan0: link is up, 1 Gbps full duplex
+Sep 25 17:06:44 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.42 from b4:2e:99:8a:71:33 via wlan0
+Sep 25 17:06:44 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.42 to b4:2e:99:8a:71:33 via wlan0
+Sep 25 17:07:15 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.89 from 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:07:15 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.89 to 20:7c:14:95:3a:bf via wlan0
+Sep 25 17:07:44 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.92.10 from 08:00:27:d4:3f:99 via wlan0
+Sep 25 17:07:44 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.92.10 to 08:00:27:d4:3f:99 via wlan0
+Sep 25 17:08:15 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.65 from 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:08:15 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.65 to 9c:d9:17:00:87:26 via wlan0
+Sep 25 17:08:29 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 192.168.100.91 from 3c:97:0e:2f:1a:88 via wlan0
+Sep 25 17:08:29 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 192.168.100.91 to 3c:97:0e:2f:1a:88 via wlan0
+Sep 25 17:08:47 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.177 from 88:51:fb:2c:a5:e7 via wlan0
+Sep 25 17:08:47 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.177 to 88:51:fb:2c:a5:e7 via wlan0
+Sep 25 17:08:48 rhel-dhcp-07.internal dhcpd[2867]: DHCPNAK on 172.16.91.88 to bc:5f:f4:12:34:ab via wlan0: lease 172.16.91.88 unavailable
+Sep 25 17:09:03 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.134 from f0:18:98:4d:e2:77 via wlan0
+Sep 25 17:09:03 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.134 to f0:18:98:4d:e2:77 via wlan0
+Sep 25 17:09:33 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.254 from 00:0c:29:8e:74:a1 via wlan0
+Sep 25 17:09:33 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.254 to 00:0c:29:8e:74:a1 via wlan0
+Sep 25 17:10:07 rhel-dhcp-07.internal dhcpd[2867]: DHCPREQUEST for 172.16.91.102 from 52:54:00:ab:cd:ef via wlan0
+Sep 25 17:10:07 rhel-dhcp-07.internal dhcpd[2867]: DHCPACK on 172.16.91.102 to 52:54:00:ab:cd:ef via wlan0

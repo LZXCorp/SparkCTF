@@ -1,0 +1,8 @@
+wonderwords
+flask
+Werkzeug
+Jinja2
+gunicorn
+pymongo[srv]
+Flask-PyMongo
+bleach

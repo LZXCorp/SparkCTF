@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}View Notes - Private Notes{% endblock %}
+
+{% block content %}
+<div class="container container-large">
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="/">Create Notes</a>
+            <a href="/view">View Notes</a>
+        </div>
+    </div>
+
+    <h2>View Your Private Note</h2>
+    
+    <div id="statusMessage"></div>
+    
+    <form id="viewNoteForm" onsubmit="event.preventDefault()">
+        <div class="form-group">
+            <label for="id">Note ID</label>
+            <input type="text" id="id" name="id" required placeholder="Enter your note ID">
+        </div>
+        
+        <div class="form-group">
+            <label for="passphrase">Passphrase</label>
+            <input type="text" id="passphrase" name="passphrase" required placeholder="Enter your passphrase">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">View Note</button>
+    </form>
+    
+    <div id="noteDisplay"></div>
+</div>
+
+<script>
+    document.getElementById('viewNoteForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const id = document.getElementById('id').value;
+        const passphrase = document.getElementById('passphrase').value;
+        const statusMessage = document.getElementById('statusMessage');
+        const noteDisplay = document.getElementById('noteDisplay');
+        
+        // Clear previous messages and notes
+        statusMessage.innerHTML = '';
+        noteDisplay.innerHTML = '';
+        
+        try {
+            const response = await fetch('/api/view', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id, passphrase: passphrase })
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                
+                if (data.title && data.content) {
+                    // Display the note
+                    noteDisplay.innerHTML = `
+                        <div class="note-display">
+                            <h3>${escapeHtml(data.title)}</h3>
+                            <p>${escapeHtml(data.content)}</p>
+                        </div>`;
+                } else {
+                    statusMessage.innerHTML = '<div class="error-message">Note not found or invalid passphrase.</div>';
+                }
+            } else {
+                statusMessage.innerHTML = '<div class="error-message">Failed to retrieve note. Please check your credentials.</div>';
+            }
+        } catch (error) {
+            statusMessage.innerHTML = '<div class="error-message">An error occurred. Please try again.</div>';
+        }
+    });
+    
+    // Helper function to escape HTML to prevent XSS
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+</script>
+{% endblock %}

@@ -1,31 +1,22 @@
 # Web Challenges
 
-All Challengse relating to *Web* for SparkCTF 2024.
+All challenges relating to *Web* for SparkCTF 2.0.
 
-## Difficulty Distribution
+## Challenges (14 total)
 
-| Difficulty | Number of Challenges |
-| ---------- |:--------------------:|
-| Easy | 6 |
-| Medium | 3 |
-| Hard | 4 |
-| Insane | 0 |
-| Total | 13 |
-
-## Challenges (13 total)
-
-| Name | Difficulty | Author |
-| ---- | ---------- | ------ |
-| [Admin Page - Flag 1](./AdminPage1) | Easy | Zhen Xiang |
-| [Admin Page - Flag 2](./AdminPage2) | Easy | Zhen Xiang |
-| [Admin Page - Flag 3](./AdminPage3) | Medium | Zhen Xiang |
-| [Admin Page - Flag 4](./AdminPage4) | Hard | Zhen Xiang |
-| [Fun In the Disco](./FunInTheDisco) | Medium | Zhen Xiang |
-| [HTML Analysis - Flag 1](./HTMLAnalysis1) | Easy | Zhen Xiang |
-| [HTML Analysis - Flag 2](./HTMLAnalysis2) | Hard | Zhen Xiang |
-| [I'm Insecure](./Im_Insecure) | Easy | Gavin |
-| [Just What's Tampered? - Flag 1](./Just_Whats_Tampered-1) | Medium | Gavin |
-| [Just What's Tampered? - Flag 2](./Just_Whats_Tampered-2) | Hard | Gavin |
-| [Secret Surprise Terrified Igloo 1](./SecretSurpriseTerrifiedIgloo1) | Easy | Zhen Xiang |
-| [Secret Surprise Terrified Igloo 2](./SecretSurpriseTerrifiedIgloo2) | Hard | Zhen Xiang |
-| [ess_ess_elle](./ess_ess_elle) | Easy | Sayed Hamzah |
+| Name | Author |
+| ---- | ------ |
+| [Cookie Monster](./Cookie%20Monster) | Aldric Liew |
+| [First Try Panic](./First%20Try%20Panic) | Joell |
+| [Insecure about the Web](./InsecureAboutTheWeb) | IAN (abcde4437) |
+| [Irrelavent Query](./Irrelevant%20Query) | Gavin (@gavintjh) |
+| [More Than Meets The Eyes](./MoreThanMeetsTheEyes) | Ian Tay |
+| [Private Notes](./privatenotes) | Zhen Xiang |
+| [PROTOCOL SP4RK - 1](./protocolsp4rk-1) | Zhen Xiang |
+| [PROTOCOL SP4RK - 2](./protocolsp4rk-2) | Zhen Xiang |
+| [PROTOCOL SP4RK - 3](./protocolsp4rk-3) | Zhen Xiang |
+| [Rendering Magic](./Rendering_Magic) | Enzo |
+| [Tamesak University - 1](./Tamesak%20University%20-%201) | Joell |
+| [Tamesak University - 2](./Tamesak%20University%20-%202) | Joell |
+| [Text Summariser](./textsummariser) | Sayed Hamzah (@BaeSenseii) |
+| [The Phantom Page](./The%20Phantom%20Page) | Aldric Liew |
